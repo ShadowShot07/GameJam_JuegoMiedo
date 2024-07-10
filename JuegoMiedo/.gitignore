@@ -25,6 +25,8 @@
 
 # Visual Studio cache directory
 .vs/
+JuegoMiedo/.vsconfig
+
 
 # Gradle cache directory
 .gradle/
