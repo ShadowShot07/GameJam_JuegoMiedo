@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PreviousRoomTrigger : MonoBehaviour
@@ -31,22 +32,62 @@ public class PreviousRoomTrigger : MonoBehaviour
             {
                 _collider.isTrigger = true;
                 _previousRoom = RoomManager.currentRoom - 1;
+                
+                if (RoomManager.currentAnomaly == null)
+                {
+                    RoomManager.backCount++;
+                    StartScreamer();
+                }
+                else if (RoomManager.currentAnomaly != null)
+                {
+                    StartCoroutine(CleanNextRoom());
+                    ResetAnomalyObjects();
+                }
                 RoomManager.CambioDeSala(_previousRoom);
-                TeleportNextRoomIn(other.gameObject, _playerDirection);
+                TeleportPreviousRoomIn(other.gameObject, _playerDirection);
             }
         }
     }
 
-    private void TeleportNextRoomIn(GameObject gameObject, Vector3 position)
+    private void TeleportPreviousRoomIn(GameObject gameObject, Vector3 position)
     {
         _enteringGameObject = gameObject;
         _enteringPosition = position;
-        TeleportNextRoomOut(_enteringGameObject, _enteringPosition);
+        TeleportPreviousRoomOut(_enteringGameObject, _enteringPosition);
     }
 
-    private void TeleportNextRoomOut(GameObject gameObject, Vector3 pos)
+    private void TeleportPreviousRoomOut(GameObject gameObject, Vector3 pos)
     {
         _exitPosition = _tpTarget.transform.position + pos - _zFixOffSet;
         gameObject.transform.position = _exitPosition;
+    }
+
+    private void ResetAnomalyObjects()
+    {
+        RoomManager.currentAnomaly = null;
+    }
+
+    public IEnumerator CleanNextRoom()
+    {
+        yield return new WaitForSeconds(3);
+        RoomManager.cleanAnomalyObjects = true;
+        // Audio tin campanita
+        Debug.Log("Ta limpio");
+    }
+
+    public void StartScreamer()
+    {
+        if (RoomManager.backCount == 2)
+        {
+            RoomManager.backCount = 0;
+            StartCoroutine(Screamer());
+        }
+    }
+
+    public IEnumerator Screamer()
+    {
+        yield return new WaitForSeconds(1.5f);
+        // aqui habria un screamer
+        Debug.Log("BUH");
     }
 }
