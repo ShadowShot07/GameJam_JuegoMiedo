@@ -14,7 +14,7 @@ public class NextRoomTrigger : MonoBehaviour
             {
                 _nextRoom = RoomManager.currentRoom + 1;
                 RoomManager.CambioDeSala(_nextRoom);
-                other.transform.position = _tpTarget.transform.position + new Vector3(other.transform.position.x, 0, _tpTarget.transform.position.z + 0.1f);
+                other.transform.position = new Vector3(_tpTarget.transform.position.x, 0, other.transform.position.z);
             }
         }
     }
