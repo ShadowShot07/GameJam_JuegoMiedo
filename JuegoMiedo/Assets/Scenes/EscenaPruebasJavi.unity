@@ -2932,11 +2932,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5430649
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.05
       objectReference: {fileID: 0}
@@ -6181,9 +6176,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0417d08284ab12b49871aebc02a9e821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextRoom: 0
   RoomManager: {fileID: 11400000, guid: 463bb4e2d1312b54a84e85fb47e5f8c6, type: 2}
+  previousRoomTrigger: {fileID: 0}
+  _nextRoom: 0
   _tpTarget: {fileID: 2010430208}
+  _zFixOffSet: {x: 0, y: 0, z: 0}
+  _finalIsActive: 0
+  _finalCanvas: {fileID: 0}
+  _objectsInstantiate: []
+  _objectsInstantiateIndex: 
+  _randomObjectIndex: 0
+  _randomObjects: 0
 --- !u!114 &1827323223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6577,9 +6580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8b4f21a6190e54185269f65627798b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _previousRoom: 0
   RoomManager: {fileID: 11400000, guid: 463bb4e2d1312b54a84e85fb47e5f8c6, type: 2}
+  _previousRoom: 0
   _tpTarget: {fileID: 1827323221}
+  _zFixOffSet: {x: 0, y: 0, z: 0}
+  _collider: {fileID: 0}
 --- !u!43 &2018185579
 Mesh:
   m_ObjectHideFlags: 0
