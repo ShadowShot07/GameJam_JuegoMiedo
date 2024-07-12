@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: RoomManagerScriptableObject
   m_EditorClassIdentifier: 
   _room: 0
-  _finalCanvas: {fileID: 0}
-  finalRoom: 0
   currentRoom: 0
+  finalRoom: 5
+  backCount: 0
+  currentAnomaly: {fileID: 0}
+  cleanAnomalyObjects: 0
   roomChangeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  finalRoomChangeEvent:
     m_PersistentCalls:
       m_Calls: []
