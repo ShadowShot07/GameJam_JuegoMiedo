@@ -28,6 +28,7 @@ public class RoomManagerScriptableObject : ScriptableObject
         finalRoom = 5;
         backCount = 0;
         cleanAnomalyObjects = false;
+        currentAnomaly = null;
         if (roomChangeEvent == null) { roomChangeEvent = new UnityEvent<int>(); }
     }
 
