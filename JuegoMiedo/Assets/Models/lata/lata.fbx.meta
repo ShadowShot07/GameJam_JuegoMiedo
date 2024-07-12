@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2832387cd6921d4ba7705502256d90c
+guid: 1b5f3a6e8f939654083a115ac1d77d1c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -14,46 +14,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Lata_tapas
     second: {fileID: 2100000, guid: 02d67c0c144beb44fab182e731ca7a44, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Metal041B_1K-PNG_Color
-    second: {fileID: 2800000, guid: c50a468762a0c1d41953855856937f48, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Metal041B_1K-PNG_Metalness
-    second: {fileID: 2800000, guid: 96f4c1cbc563ec646bc0a9032592187d, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Metal041B_1K-PNG_NormalGL
-    second: {fileID: 2800000, guid: 73a42f5571a01e94fb033e08ca94c357, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Metal041B_1K-PNG_Roughness
-    second: {fileID: 2800000, guid: bcd283feb99286546b7bac666994047a, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: PaintedMetal004_1K-JPG_Color
-    second: {fileID: 2800000, guid: 589cd98893203844190848a044a8fa60, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: PaintedMetal004_1K-JPG_Metalness
-    second: {fileID: 2800000, guid: d3bd92ea52dc56049bfb10ab27b6f99b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: PaintedMetal004_1K-JPG_NormalGL
-    second: {fileID: 2800000, guid: 00fd7ec786b54cc4da1ac99274ee3190, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: PaintedMetal004_1K-JPG_Roughness
-    second: {fileID: 2800000, guid: 70e3b29eb6b2ff64395a33cc06d84e2d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
