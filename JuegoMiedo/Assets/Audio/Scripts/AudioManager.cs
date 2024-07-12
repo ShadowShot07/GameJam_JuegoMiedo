@@ -8,14 +8,8 @@ public class AudioManager : MonoBehaviour
 {
     private EventInstance mainTheme;
     private EventInstance gameTheme;
-    private EventInstance footsteps;
-    private EventInstance climb;
-    private EventInstance crown;
-    private EventInstance voice_princess;
-    private EventInstance voice_twiceSlodierAnt;
-    private EventInstance voice_Scientist;
-    private EventInstance voice_hystericant;
-    private EventInstance voice_wideExoAnt;
+    private EventInstance childFootsteps;
+    private EventInstance heartBeat;
     private EventInstance uiAccept;
     private EventInstance uiCancel;
 
@@ -60,21 +54,15 @@ public class AudioManager : MonoBehaviour
         //musicBus = RuntimeManager.GetBus("bus:/Music");
         //sfxBus = RuntimeManager.GetBus("bus:/SFX");
 
-        //CreateInstances();
+        CreateInstances();
     }
 
     private void CreateInstances()
     {
         mainTheme = CreateEventInstance(FmodEvents.instance.playMainTheme);
-        footsteps = CreateEventInstance(FmodEvents.instance.playFootstep);
-        climb = CreateEventInstance(FmodEvents.instance.playClimbing);
-        crown = CreateEventInstance(FmodEvents.instance.playCorona);
+        childFootsteps = CreateEventInstance(FmodEvents.instance.playChildFootstep);
+        heartBeat = CreateEventInstance(FmodEvents.instance.playHeartBeat);
         gameTheme = CreateEventInstance(FmodEvents.instance.playGameTheme);
-        voice_princess = CreateEventInstance(FmodEvents.instance.playPrincessVoice);
-        voice_twiceSlodierAnt = CreateEventInstance(FmodEvents.instance.playTwiceSoldierVoice);
-        voice_Scientist = CreateEventInstance(FmodEvents.instance.playSciantistVoice);
-        voice_hystericant = CreateEventInstance(FmodEvents.instance.playHystericantVoice);
-        voice_wideExoAnt = CreateEventInstance(FmodEvents.instance.playWideExoAntVoice);
         uiAccept = CreateEventInstance(FmodEvents.instance.playUIAccept);
         uiCancel = CreateEventInstance(FmodEvents.instance.playUICancel);
     }
@@ -98,19 +86,14 @@ public class AudioManager : MonoBehaviour
         gameTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
-    public void PlayFootstep()
+    public void playChildFootstep()
     {
-        footsteps.start();
+        childFootsteps.start();
     }
 
     public void PlayClimbing()
     {
-        climb.start();
-    }
-
-    public void PlayCorona()
-    {
-        crown.start();
+        heartBeat.start();
     }
 
     public void PlayUIAccept()
