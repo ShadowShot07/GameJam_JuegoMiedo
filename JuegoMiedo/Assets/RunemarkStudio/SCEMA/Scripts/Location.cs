@@ -15,7 +15,7 @@
         public string Name;
         public Sprite LoadingScreen;
         public SceneAsset Scene;
-        public List<string> additiveScenes = new List<string>();
+        [SerializeField] public List<string> additiveScenes = new List<string>();
         
         public void Enter()
         {
