@@ -54,17 +54,22 @@ public class AudioManager : MonoBehaviour
         //musicBus = RuntimeManager.GetBus("bus:/Music");
         //sfxBus = RuntimeManager.GetBus("bus:/SFX");
 
+        //CreateInstances();
+    }
+
+    private void Start()
+    {
         CreateInstances();
     }
 
     private void CreateInstances()
     {
-        mainTheme = CreateEventInstance(FmodEvents.instance.playMainTheme);
+        //mainTheme = CreateEventInstance(FmodEvents.instance.playMainTheme);
         childFootsteps = CreateEventInstance(FmodEvents.instance.playChildFootstep);
-        heartBeat = CreateEventInstance(FmodEvents.instance.playHeartBeat);
-        gameTheme = CreateEventInstance(FmodEvents.instance.playGameTheme);
-        uiAccept = CreateEventInstance(FmodEvents.instance.playUIAccept);
-        uiCancel = CreateEventInstance(FmodEvents.instance.playUICancel);
+        //heartBeat = CreateEventInstance(FmodEvents.instance.playHeartBeat);
+        //gameTheme = CreateEventInstance(FmodEvents.instance.playGameTheme);
+        //uiAccept = CreateEventInstance(FmodEvents.instance.playUIAccept);
+        //uiCancel = CreateEventInstance(FmodEvents.instance.playUICancel);
     }
 
     public void StartMusic()

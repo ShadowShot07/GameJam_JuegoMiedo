@@ -17,6 +17,7 @@ using UnityEngine.UI;
 public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
+    private Animator anim;
 
     #region Camera Movement Variables
 
@@ -134,6 +135,11 @@ public class FirstPersonController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        if (TryGetComponent<Animator>(out Animator  animator))
+        {
+            anim = animator;
+            Debug.Log("Animator: " + anim);
+        }
 
         crosshairObject = GetComponentInChildren<Image>();
 
@@ -378,10 +384,18 @@ public class FirstPersonController : MonoBehaviour
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true;
+                if (anim != null)
+                {
+                    anim.SetBool("isWalking", true);
+                }
             }
             else
             {
                 isWalking = false;
+                if (anim != null)
+                {
+                    anim.SetBool("isWalking", false);
+                }
             }
 
             // All movement calculations shile sprint is active
@@ -436,6 +450,15 @@ public class FirstPersonController : MonoBehaviour
 
                 rb.AddForce(velocityChange, ForceMode.VelocityChange);
             }
+            if (isSprinting)
+            {
+                anim.SetFloat("time", rb.velocity.magnitude * 1.25f);
+            }
+            else
+            {
+                anim.SetFloat("time", rb.velocity.magnitude);
+            }
+            
         }
 
         #endregion
@@ -526,6 +549,12 @@ public class FirstPersonController : MonoBehaviour
             timer = 0;
             joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
         }
+    }
+
+    private void PlayFootsteps()
+    {
+        Debug.Log("FOOTSTEP");
+        AudioManager.instance.playChildFootstep();
     }
 }
 

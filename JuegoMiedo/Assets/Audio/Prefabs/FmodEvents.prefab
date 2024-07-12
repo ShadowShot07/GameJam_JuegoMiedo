@@ -60,11 +60,11 @@ MonoBehaviour:
     Path: 
   <playChildFootstep>k__BackingField:
     Guid:
-      Data1: -1172788538
-      Data2: 1317185497
-      Data3: -201980772
-      Data4: -599173354
-    Path: event:/ChildFootsteps 2
+      Data1: -947086785
+      Data2: 1085844878
+      Data3: 1272332948
+      Data4: -271623492
+    Path: event:/ChildFootsteps
   <playHeartBeat>k__BackingField:
     Guid:
       Data1: 0

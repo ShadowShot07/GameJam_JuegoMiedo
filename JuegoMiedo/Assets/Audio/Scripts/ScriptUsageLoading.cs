@@ -43,7 +43,7 @@ class ScriptUsageLoading : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Progress: " + async.progress);
+        //Debug.Log("Progress: " + async.progress);
     }
 
     IEnumerator LoadGameAsync()
@@ -81,7 +81,7 @@ class ScriptUsageLoading : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("All banks loaded");
+        //Debug.Log("All banks loaded");
 
         // Keep yielding the co-routine until all the sample data loading is done
         while (FMODUnity.RuntimeManager.AnySampleDataLoading())
@@ -89,23 +89,23 @@ class ScriptUsageLoading : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("All sample data is loaded");
+        //Debug.Log("All sample data is loaded");
 
         // Allow the scene to be activated. This means that any OnActivated() or Start()
         // methods will be guaranteed that all FMOD Studio loading will be completed and
         // there will be no delay in starting events
         async.allowSceneActivation = true;
-        Debug.Log("Assync is done? " + async.isDone);
+        //Debug.Log("Assync is done? " + async.isDone);
         
 
         // Keep yielding the co-routine until scene loading and activation is done.
         while (!async.isDone)
         {
-            Debug.Log("Assync is done? " + async.isDone);
+            //Debug.Log("Assync is done? " + async.isDone);
             yield return null;
         }
 
-        Debug.Log("Finished Loading Banks");
+        //Debug.Log("Finished Loading Banks");
 
     }
 }
