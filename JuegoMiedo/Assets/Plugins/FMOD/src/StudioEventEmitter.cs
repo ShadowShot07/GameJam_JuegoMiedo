@@ -383,5 +383,101 @@ namespace FMODUnity
             }
             return false;
         }
+
+        // TUTO
+
+        public static Transform ListenerTransform
+        {
+            get
+            {
+                if (listenerTransform == null)
+                {
+                    var listener = GameObject.FindObjectOfType<StudioListener>();
+                    if (listener != null)
+                    {
+                        listenerTransform = listener.transform;
+                    }
+                }
+                return listenerTransform;
+            }
+        }
+        private static Transform listenerTransform = null;
+
+        public static float ComputeOcclusion(Transform sourceTransform)
+        {
+            var listener = GameObject.FindObjectOfType<StudioListener>();
+            occlusionMaskValue = listener.occlusionMask;
+
+            float occlusion = 0.0f;
+            if (ListenerTransform != null)
+            {
+                Vector3 listenerPosition = ListenerTransform.position;
+                Vector3 sourceFromListener = sourceTransform.position - listenerPosition;
+
+                int numHits = Physics.RaycastNonAlloc(listenerPosition, sourceFromListener, occlusionHits, sourceFromListener.magnitude, occlusionMaskValue);
+
+                for (int i = 0; i < numHits; ++i)
+                {
+                    if (occlusionHits[i].transform != listenerTransform && occlusionHits[i].transform != sourceTransform)
+                    {
+
+                        occlusion += 0.1f;
+                    }
+                }
+            }
+            return occlusion;
+        }
+
+        /// Maximum allowed number of raycast hits for occlusion computation per source.
+        public const int maxNumOcclusionHits = 12;
+
+        // Pre-allocated raycast hit list for occlusion computation.
+        private static RaycastHit[] occlusionHits = new RaycastHit[maxNumOcclusionHits];
+
+        // Occlusion layer mask.
+        private static int occlusionMaskValue = -1;
+
+        /// Source occlusion detection rate in seconds.
+        public const float occlusionDetectionInterval = 0.2f;
+
+        public bool occlusionEnabled = false;
+        public string occlusionParameterName = null;
+        [Range(0.0f, 10.0f)]
+        public float occlusionIntensity = 1.0f;
+        public float currentOcclusion = 0.0f;
+        public float nextOcclusionUpdate = 0.0f;
+
+        void Update()
+        {
+            if (instance.isValid())
+            {
+                instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(this.gameObject));
+                if (!occlusionEnabled)
+                {
+                    currentOcclusion = 0.0f;
+                }
+                else if (Time.time >= nextOcclusionUpdate)
+                {
+                    nextOcclusionUpdate = Time.time + occlusionDetectionInterval;
+                    float newOclusion = occlusionIntensity * ComputeOcclusion(transform);
+                    //instance.setParameterByName(occlusionParameterName, currentOcclusion);
+                    StartCoroutine(LerpOcclusion(newOclusion));
+                }
+            }
+        }
+
+        private IEnumerator LerpOcclusion(float newOcclusion)
+        {
+            float occlusionTime = occlusionDetectionInterval - 0.01f;
+            float occlusion = 0;
+
+            for (float f = 0; f <= occlusionTime; f += Time.deltaTime)
+            {
+                occlusion = Mathf.Lerp(currentOcclusion, newOcclusion, f / occlusionTime);
+                instance.setParameterByName(occlusionParameterName, occlusion);
+                yield return null;
+            }
+            currentOcclusion = newOcclusion;
+        }
     }
 }

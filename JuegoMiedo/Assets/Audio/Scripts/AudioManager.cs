@@ -56,11 +56,11 @@ public class AudioManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
 
-        masterBus = RuntimeManager.GetBus("bus:/");
-        musicBus = RuntimeManager.GetBus("bus:/Music");
-        sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        //masterBus = RuntimeManager.GetBus("bus:/");
+        //musicBus = RuntimeManager.GetBus("bus:/Music");
+        //sfxBus = RuntimeManager.GetBus("bus:/SFX");
 
-        CreateInstances();
+        //CreateInstances();
     }
 
     private void CreateInstances()

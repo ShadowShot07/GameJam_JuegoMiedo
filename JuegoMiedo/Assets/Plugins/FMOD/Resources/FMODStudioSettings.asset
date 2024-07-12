@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: 46fbfdf3fc43db0458918377fd40293e
   parentIdentifier: default
-  active: 0
+  active: 1
   Properties:
     LiveUpdate:
       Value: 0
@@ -130,14 +130,14 @@ MonoBehaviour:
       HasValue: 0
     Plugins:
       Value: []
-      HasValue: 0
+      HasValue: 1
     StaticPlugins:
       Value: []
       HasValue: 0
     CallbackHandler:
       Value: {fileID: 0}
-      HasValue: 0
-  OutputTypeName: 
+      HasValue: 1
+  OutputTypeName: WEBAUDIO
   threadAffinities:
     Value: []
     HasValue: 0
@@ -542,8 +542,8 @@ MonoBehaviour:
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
-  AutomaticEventLoading: 1
-  BankLoadType: 0
+  AutomaticEventLoading: 0
+  BankLoadType: 1
   AutomaticSampleLoading: 0
   EncryptionKey: 
   ImportType: 0
@@ -561,8 +561,14 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
-  BanksToLoad: []
+  Banks:
+  - ScarySFX
+  - SFX
+  BanksToLoad:
+  - Master
+  - Master.strings
+  - ScarySFX
+  - SFX
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
