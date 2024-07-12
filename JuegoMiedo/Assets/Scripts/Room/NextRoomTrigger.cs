@@ -6,7 +6,6 @@ public class NextRoomTrigger : MonoBehaviour
 {
     [Header("Habitaciones")]
     [SerializeField] private RoomManagerScriptableObject RoomManager;
-    [SerializeField] private PreviousRoomTrigger previousRoomTrigger;
     [SerializeField] private int _nextRoom;
 
     [Header("Opciones del TP")]
@@ -24,6 +23,9 @@ public class NextRoomTrigger : MonoBehaviour
     [Header("Numero Random del index")]
     [SerializeField] private int _randomObjectIndex;
     [SerializeField] private float _randomObjects;
+
+    [Header("Screamer")]
+    [SerializeField] private Screamer _screamer;
 
     // Variables de posiciones para los TP
     private Vector3 _playerDirection;
@@ -113,14 +115,9 @@ public class NextRoomTrigger : MonoBehaviour
 
     public void StartScreamer()
     {
-        StartCoroutine(Screamer());
+        StartCoroutine(_screamer.IScreamer());
         RoomManager.backCount = 0;
     }
 
-    public IEnumerator Screamer()
-    {
-        yield return new WaitForSeconds(1.5f);
-        // aqui habria un screamer
-        Debug.Log("BUH");
-    }
+
 }

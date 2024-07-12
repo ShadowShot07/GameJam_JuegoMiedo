@@ -12,6 +12,9 @@ public class PreviousRoomTrigger : MonoBehaviour
     [SerializeField] private Vector3 _zFixOffSet;
     [SerializeField] private MeshCollider _collider;
 
+    [Header("Screamer")]
+    [SerializeField] private Screamer _screamer;
+
     // Variables de posiciones para los TP
     private Vector3 _playerDirection;
     private Vector3 _exitPosition;
@@ -80,14 +83,7 @@ public class PreviousRoomTrigger : MonoBehaviour
         if (RoomManager.backCount == 2)
         {
             RoomManager.backCount = 0;
-            StartCoroutine(Screamer());
+            StartCoroutine(_screamer.IScreamer());
         }
-    }
-
-    public IEnumerator Screamer()
-    {
-        yield return new WaitForSeconds(1.5f);
-        // aqui habria un screamer
-        Debug.Log("BUH");
     }
 }

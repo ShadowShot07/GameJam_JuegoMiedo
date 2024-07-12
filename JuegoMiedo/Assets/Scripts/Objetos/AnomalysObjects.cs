@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class AnomalysObjects : MonoBehaviour
 {
-    [SerializeField] private Animation _animationNormal;
-    [SerializeField] private Animation _animationAnomaly;
+    [SerializeField] private Animator _animatior;
 
     public bool _haveAnomaly = false;
 
