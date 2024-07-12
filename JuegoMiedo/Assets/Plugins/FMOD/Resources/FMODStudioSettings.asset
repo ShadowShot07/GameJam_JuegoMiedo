@@ -562,13 +562,13 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - NonSFX
   - ScarySFX
   - SFX
   BanksToLoad:
   - Master
   - Master.strings
-  - ScarySFX
-  - SFX
+  - NonSFX
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
