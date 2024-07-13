@@ -3,7 +3,147 @@ guid: c7937e148fcb3344ca1b738594028a28
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AC
+    second: {fileID: 2100000, guid: e245263733fff9346a82c16feb46b9e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concreto
+    second: {fileID: 2100000, guid: 92882411aeb05f947851e3ecfcb85473, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concreto.001
+    second: {fileID: 2100000, guid: c9eba7a75dea206458647ff692167129, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cristal
+    second: {fileID: 2100000, guid: e37139496e3868044b55649399712189, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ladrillo
+    second: {fileID: 2100000, guid: ec3526512d0b29141ab99c3c1220c4e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lo negro del restaurante
+    second: {fileID: 2100000, guid: c241371112a8d1143badee44d2ff474f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madera
+    second: {fileID: 2100000, guid: 721af13721b8c92419ca601915ec9f7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Pocho
+    second: {fileID: 2100000, guid: 7281bca943e192b46803e0dd009d0e30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ventilador
+    second: {fileID: 2100000, guid: f8275dce87e347e4a94c95abbcc62302, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Aire acondicionado
+    second: {fileID: 2800000, guid: cf0af9e7af0ba094098a94901b951fdb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bricks054_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: 3dd35e83bacf76d4d942ca60589831d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bricks054_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: fa7867c440c90544aaa1b88dcaf4d58c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal005_2K-JPG_Color
+    second: {fileID: 2800000, guid: 88c71cac7b38e7b40ad8f749c99fa35a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal005_2K-JPG_Metalness
+    second: {fileID: 2800000, guid: dbe82838f59b2b34f859d88b1095ad7a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal005_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: ca29d1b3c72928d45b4472b22394c647, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedMetal010_2K-JPG_Color
+    second: {fileID: 2800000, guid: 9b0ae3d5789e9394597c7c64c1180729, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedMetal010_2K-JPG_Metalness
+    second: {fileID: 2800000, guid: d53d019810a015e4993afb7d0d90deab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedMetal010_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: ad87f66f35e997e4cbac8a9f6cf93dfa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedMetal010_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: cef2b8311867c60449afa3be54fd86ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedPlaster015_2K-JPG_Color
+    second: {fileID: 2800000, guid: e3bcf42876c937b4daa448bf414363e7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedPlaster015_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: ddc39572199b67740b8d4240c9b784e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedPlaster015_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: 364052560171a7d4cb255dad4a034c4f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Rubber004_2K-JPG_Color
+    second: {fileID: 2800000, guid: 7fd141c8185de1b4dbbc2e1b6d91a287, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Rubber004_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: 98e107662eb7d634da2318bcb1e4e51b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Rubber004_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: 28ff859291d10ae4485e0f48d5374bd5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood059_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: 5442b12588b160544b2c8b7324d2f521, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood059_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: 7c4ed9ad21020d647bd623aa5b265c2e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: restaurante
+    second: {fileID: 2800000, guid: 4b5e01f445d903f43aafc20cff0a92d8, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

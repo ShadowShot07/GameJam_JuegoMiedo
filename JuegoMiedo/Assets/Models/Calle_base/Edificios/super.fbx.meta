@@ -3,7 +3,77 @@ guid: f463c39b8d6d4d14aa385391c26b5d5a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blanco
+    second: {fileID: 2100000, guid: bbc8c57675535594a97767b20b3846c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cartel super
+    second: {fileID: 2100000, guid: a5b011a66c2a58f4596d0b5f90e70348, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cartel_der
+    second: {fileID: 2100000, guid: 6dcaf095db1502b47ad2832b474d7be3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cartel_izq
+    second: {fileID: 2100000, guid: c5cf318be5db7554090cd91822700cf9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cartel_mid
+    second: {fileID: 2100000, guid: e189acfa9a4571a47bb7af829cb398ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concreto
+    second: {fileID: 2100000, guid: 8572849855b73d044ae403ac48aecce3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cristal
+    second: {fileID: 2100000, guid: ce426a2d4b36cba45b1b0284c470e152, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ladrillo
+    second: {fileID: 2100000, guid: 272b81cf54b005747b3e456c2f83c9c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Verde
+    second: {fileID: 2100000, guid: 3ff61607d9887094bb87311d6b320959, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedPlaster015_2K-JPG_Color
+    second: {fileID: 2800000, guid: d5f5bf9875136bb4e949a63620a51c53, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedPlaster015_2K-JPG_NormalGL
+    second: {fileID: 2800000, guid: 5a1422a1c2586fe499471f267be03f5d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: descuento1
+    second: {fileID: 2800000, guid: e4dd66b2304fe864ca7587b6067f00eb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: descuento2
+    second: {fileID: 2800000, guid: 07d5721acfcf2254487b8fa327683581, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: descuento3
+    second: {fileID: 2800000, guid: 83aa3ae700a21ae42bf2d4d0e2c66489, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
