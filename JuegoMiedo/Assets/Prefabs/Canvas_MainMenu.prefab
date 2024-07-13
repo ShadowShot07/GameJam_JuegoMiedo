@@ -547,6 +547,7 @@ MonoBehaviour:
   toGameLocation: {fileID: 11400000, guid: 6871fb1e286ad63479bd5cea07b57678, type: 2}
   closeSettings: {fileID: 6334775655062413539}
   closeCredits: {fileID: 5549096194606162647}
+  mouseSensvtySlider: {fileID: 6657713313934765657}
   settingsPanel: {fileID: 2696000074296213268}
   creditsPanel: {fileID: 3144719111374128610}
 --- !u!1 &1248799895528966182
@@ -3918,7 +3919,7 @@ GameObject:
   - component: {fileID: 5228619873899931464}
   - component: {fileID: 6657713313934765657}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Slider_MouseSens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3990,10 +3991,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 6276250774547827550}
   m_HandleRect: {fileID: 8575417354069083789}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 0.1
+  m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

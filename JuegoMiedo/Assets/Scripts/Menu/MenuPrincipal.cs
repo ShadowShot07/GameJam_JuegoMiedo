@@ -19,6 +19,8 @@ public class MenuPrincipal : MonoBehaviour
     [SerializeField] private Button closeSettings;
     [SerializeField] private Button closeCredits;
 
+    [SerializeField] private Slider mouseSensvtySlider;
+
     [SerializeField] private Canvas settingsPanel;
     [SerializeField] private Canvas creditsPanel;
 
@@ -28,6 +30,9 @@ public class MenuPrincipal : MonoBehaviour
     {
         settingsPanel.enabled = false;
         creditsPanel.enabled = false;
+
+        mouseSensvtySlider.onValueChanged.AddListener(OnSensitivityChange);
+
         startButton.onClick.AddListener(OnStartButtonPressed);
         SettingsButton.onClick.AddListener(OnSettingsButtonPressed);
         CreditsButton.onClick.AddListener(OnCreditsButtonPressed);
@@ -48,11 +53,17 @@ public class MenuPrincipal : MonoBehaviour
     public void OnSettingsButtonPressed()
     {
         settingsPanel.enabled = true;
+        mouseSensvtySlider.value = GameGlobal.instance.globalSensitivity;
         closeSettings.onClick.AddListener(OnCloseSettingsButtonPressed);
     }
     public void OnCloseSettingsButtonPressed()
     {
         settingsPanel.enabled = false;
+    }
+
+    private void OnSensitivityChange(float sensitivityValue)
+    {
+        GameGlobal.instance.globalSensitivity = sensitivityValue;
     }
 
     //Credits button
