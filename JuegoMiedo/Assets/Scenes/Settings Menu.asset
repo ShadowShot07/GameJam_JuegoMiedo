@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Settings
   LoadingScreen: {fileID: 0}
   Scene:
-    name: EscenaPruebasJavi
-    asset: {fileID: 102900000, guid: 588d3a778cff87840ae5e8434aaceb43, type: 3}
+    name: MenuOpciones
+    asset: {fileID: 102900000, guid: 79762d036ed91df4ab27ebdee3bebc0f, type: 3}
   additiveScenes: []

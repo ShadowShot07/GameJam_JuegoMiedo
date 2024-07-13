@@ -647,7 +647,7 @@ MonoBehaviour:
   ExitButton: {fileID: 8592773148703177691}
   CreditsButton: {fileID: 0}
   toGameLocation: {fileID: 11400000, guid: 6871fb1e286ad63479bd5cea07b57678, type: 2}
-  toSettingsLocation: {fileID: 0}
+  toSettingsLocation: {fileID: 11400000, guid: b9267c8ee4f86b74cb3133d41ead9cb2, type: 2}
   toCreditsLocation: {fileID: 0}
 --- !u!1 &8674304871696284741
 GameObject:
