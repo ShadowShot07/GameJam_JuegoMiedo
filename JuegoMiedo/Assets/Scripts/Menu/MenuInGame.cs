@@ -26,7 +26,7 @@ public class MenuInGame : MonoBehaviour
     private void Update()
     {
         OpenMenu();
-        Debug.Log(Time.timeScale.ToString());
+
     }
 
     private void OnDisable()
@@ -54,6 +54,7 @@ public class MenuInGame : MonoBehaviour
     //Settings button
     public void PauseGame()
     {
+        GameGlobal.instance.inGameMenuOn.Invoke();
         //Show settings panel
         settingsPanel.enabled = true;
 
@@ -67,6 +68,7 @@ public class MenuInGame : MonoBehaviour
     }
     public void BackToGame()
     {
+        GameGlobal.instance.inGameMenuOff.Invoke();
         //Close settings panel
         settingsPanel.enabled = false;
 
@@ -77,6 +79,7 @@ public class MenuInGame : MonoBehaviour
     public void BackToMainMenu()
     {
         settingsPanel.enabled = false;
+        Time.timeScale = 1;
         toMainMenuLocation.Enter();
     }
 
