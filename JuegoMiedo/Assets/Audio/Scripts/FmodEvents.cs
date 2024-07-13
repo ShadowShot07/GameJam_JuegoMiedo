@@ -8,15 +8,24 @@ public class FmodEvents : MonoBehaviour
     [field: Header("Main Theme")]
     [field: SerializeField] public EventReference playMainTheme {get; private set;}
 
-    [field: Header("Game Theme")]
-    [field: SerializeField] public EventReference playGameTheme { get; private set; }
+    [field: Header("Game Ambience")]
+    [field: SerializeField] public EventReference playGameAmbience { get; private set; }
 
     [field: Header("Footsteps")]
     [field: SerializeField] public EventReference playChildFootstep { get; private set; }
 
     [field: Header("HeartBeat")]
     [field: SerializeField] public EventReference playHeartBeat { get; private set; }
-   
+
+    [field: Header("Scream")]
+    [field: SerializeField] public EventReference playScream { get; private set; }
+
+    [field: Header("Anomaly Cleaned")]
+    [field: SerializeField] public EventReference playAnomalyCleaned { get; private set; }
+
+    [field: Header("Scary Sound")]
+    [field: SerializeField] public EventReference playScarySound { get; private set; }
+
     [field: Header("UI Accept")]
     [field: SerializeField] public EventReference playUIAccept { get; private set; }
     

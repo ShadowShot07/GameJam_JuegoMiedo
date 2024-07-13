@@ -12,6 +12,7 @@ public class MenuPrincipal : MonoBehaviour
     private void Start()
     {
         startButton.onClick.AddListener(OnStartButtonPressed);
+        AudioManager.instance.StartMusic();
     }
 
     private void OnDisable()
@@ -22,5 +23,6 @@ public class MenuPrincipal : MonoBehaviour
     public void OnStartButtonPressed()
     {
         toGameLocation.Enter();
+        AudioManager.instance.StopMusic();
     }
 }

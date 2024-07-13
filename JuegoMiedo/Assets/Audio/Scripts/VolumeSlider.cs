@@ -33,6 +33,9 @@ public class VolumeSlider : MonoBehaviour
             case AudioManager.BusType.MUSIC:
                 volumeSlider.value = AudioManager.instance.musicVolume;
                 break;
+            case AudioManager.BusType.AMBIENCE:
+                volumeSlider.value = AudioManager.instance.ambienceVolume;
+                break;
             case AudioManager.BusType.SFX:
                 volumeSlider.value = AudioManager.instance.sfxVolume;
                 break;

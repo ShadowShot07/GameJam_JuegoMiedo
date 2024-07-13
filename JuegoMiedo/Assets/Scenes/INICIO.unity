@@ -331,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 6962999527655479963, guid: b18df5993656d0a41a6bdcea43399db8,
         type: 3}
       propertyPath: webGLBanks.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6962999527655479963, guid: b18df5993656d0a41a6bdcea43399db8,
         type: 3}
@@ -352,6 +352,16 @@ PrefabInstance:
         type: 3}
       propertyPath: webGLBanks.Array.data[2]
       value: NonSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962999527655479963, guid: b18df5993656d0a41a6bdcea43399db8,
+        type: 3}
+      propertyPath: webGLBanks.Array.data[3]
+      value: NonAmbience
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962999527655479963, guid: b18df5993656d0a41a6bdcea43399db8,
+        type: 3}
+      propertyPath: webGLBanks.Array.data[4]
+      value: NonMusic
       objectReference: {fileID: 0}
     - target: {fileID: 6962999527655479963, guid: b18df5993656d0a41a6bdcea43399db8,
         type: 3}
