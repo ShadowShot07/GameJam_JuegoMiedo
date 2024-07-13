@@ -10,6 +10,7 @@ public class MenuInGame : MonoBehaviour
     [Header("Settings Menu")]
     [SerializeField] private Button mainMenuButton;
     [SerializeField] private Button closeSettings;
+    [SerializeField] private Slider mouseSensvtySlider;
 
     [SerializeField] private Location toMainMenuLocation;
     
@@ -20,7 +21,7 @@ public class MenuInGame : MonoBehaviour
     private void Start()
     {
         settingsPanel.enabled = false;
-
+        mouseSensvtySlider.onValueChanged.AddListener(OnSensitivityChange);
     }
     
     private void Update()
@@ -35,7 +36,10 @@ public class MenuInGame : MonoBehaviour
         mainMenuButton.onClick.RemoveListener(BackToMainMenu);
     }
 
-    
+    private void OnSensitivityChange(float sensitivityValue)
+    {
+        GameGlobal.instance.globalSensitivity = sensitivityValue;
+    }
     //Pause game
     private void OpenMenu()
     {
@@ -63,6 +67,7 @@ public class MenuInGame : MonoBehaviour
         isPaused = true;
 
         //Enable buttons
+        mouseSensvtySlider.value = GameGlobal.instance.globalSensitivity;
         closeSettings.onClick.AddListener(BackToGame);
         mainMenuButton.onClick.AddListener(BackToMainMenu);
     }
@@ -75,6 +80,10 @@ public class MenuInGame : MonoBehaviour
         //Play game
         Time.timeScale = 1;
         isPaused = false;
+
+        //Disable buttons
+        closeSettings.onClick.RemoveListener(BackToGame);
+        mainMenuButton.onClick.RemoveListener(BackToMainMenu);
     }
     public void BackToMainMenu()
     {
