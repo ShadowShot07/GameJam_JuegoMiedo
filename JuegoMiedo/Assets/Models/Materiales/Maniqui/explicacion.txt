@@ -1,3 +1,0 @@
-NORMALES: fullbody_normal
-
-COLORES: el blanco en el que pone el cuerpo entero, el negro en los ojos. Para poner los ojos rojos usa el blanco y ponle el color rojo manualmente
