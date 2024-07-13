@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/RunemarkStudio/SCEMA/Scene/Bootstrap.unity
     guid: f073e6031dc655d49b232a564a2c728c
   - enabled: 1
-    path: Assets/Scenes/EscenaPruebaGorka.unity
+    path: Assets/Scenes/EscenaPruebaEscenario.unity
     guid: c664180c4cabada4ca774972fa153e4a
+  - enabled: 1
+    path: Assets/Scenes/EscenaPruebasJavi.unity
+    guid: 588d3a778cff87840ae5e8434aaceb43
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e211279e796a23b40b6052e83f1925a6,
       type: 2}

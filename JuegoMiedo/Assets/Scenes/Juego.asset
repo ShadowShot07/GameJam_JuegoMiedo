@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Juego
   LoadingScreen: {fileID: 0}
   Scene:
-    name: EscenaPruebaGorka
-    asset: {fileID: 102900000, guid: c664180c4cabada4ca774972fa153e4a, type: 3}
+    name: EscenaPruebasJavi
+    asset: {fileID: 102900000, guid: 588d3a778cff87840ae5e8434aaceb43, type: 3}
   additiveScenes: []

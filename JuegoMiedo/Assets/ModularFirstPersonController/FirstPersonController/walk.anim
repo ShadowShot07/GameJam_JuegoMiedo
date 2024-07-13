@@ -54,21 +54,24 @@ AnimationClip:
   - time: 0
     functionName: PlayFootsteps
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 4459864850019384750, guid: 8a03904b65a31be4abd8201621e83a5a,
+      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.5
     functionName: PlayFootsteps
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 4459864850019384750, guid: 8a03904b65a31be4abd8201621e83a5a,
+      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1
     functionName: 
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 4459864850019384750, guid: 8a03904b65a31be4abd8201621e83a5a,
+      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
