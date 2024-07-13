@@ -2,23 +2,22 @@ using UnityEngine;
 
 public class AnomalysObjects : MonoBehaviour
 {
-    [SerializeField] private Animator _animatior;
-
-    public bool _haveAnomaly = false;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private bool _haveAnomaly = false;
 
     public void AnomalySwitch()
     {
         if (_haveAnomaly)
         {
-            //_animationAnomaly.Play();
+            _animator.SetBool("Anomalo", false);
             Debug.Log("Yo soy normal jeje");
             _haveAnomaly = false;
         } 
-        else if (!_haveAnomaly)
+        else
         {
+            _animator.SetBool("Anomalo", true);
             Debug.Log("Soy Anomalo grrrrr");
             _haveAnomaly = true;
-            //_animationNormal.Play();
         }
     }
 }
