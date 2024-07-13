@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class MenuInGame : MonoBehaviour
 {
+    [SerializeField] private bool isPaused = false;
     [Header("Settings Menu")]
     [SerializeField] private Button mainMenuButton;
-    [SerializeField] private Button settingsButton;
     [SerializeField] private Button closeSettings;
 
     [SerializeField] private Location toMainMenuLocation;
@@ -20,32 +20,61 @@ public class MenuInGame : MonoBehaviour
     private void Start()
     {
         settingsPanel.enabled = false;
-        
-        mainMenuButton.onClick.AddListener(OnBackToMainMenuButtonPressed);
-        settingsButton.onClick.AddListener(OnSettingsButtonPressed);
-        
+
     }
     
+    private void Update()
+    {
+        OpenMenu();
+        Debug.Log(Time.timeScale.ToString());
+    }
+
     private void OnDisable()
     {
-        mainMenuButton.onClick.RemoveListener(OnBackToMainMenuButtonPressed);
-        settingsButton.onClick.RemoveListener(OnSettingsButtonPressed);
+        closeSettings.onClick.RemoveListener(BackToGame);
+        mainMenuButton.onClick.RemoveListener(BackToMainMenu);
     }
 
     
-
+    //Pause game
+    private void OpenMenu()
+    {
+        if (Input.GetKeyDown("escape"))
+        {
+            if (isPaused)
+            {
+                BackToGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+    }
     //Settings button
-    public void OnSettingsButtonPressed()
+    public void PauseGame()
     {
+        //Show settings panel
         settingsPanel.enabled = true;
-        closeSettings.onClick.AddListener(OnCloseSettingsButtonPressed);
-        closeSettings.onClick.AddListener(OnCloseSettingsButtonPressed);
+
+        //Pause game
+        Time.timeScale = 0;
+        isPaused = true;
+
+        //Enable buttons
+        closeSettings.onClick.AddListener(BackToGame);
+        mainMenuButton.onClick.AddListener(BackToMainMenu);
     }
-    public void OnCloseSettingsButtonPressed()
+    public void BackToGame()
     {
+        //Close settings panel
         settingsPanel.enabled = false;
+
+        //Play game
+        Time.timeScale = 1;
+        isPaused = false;
     }
-    public void OnBackToMainMenuButtonPressed()
+    public void BackToMainMenu()
     {
         settingsPanel.enabled = false;
         toMainMenuLocation.Enter();
