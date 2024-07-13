@@ -7,37 +7,30 @@ using UnityEngine.UI;
 public class MenuOpciones : MonoBehaviour
 {
     [Header("Buttons")]
-    [SerializeField] private Button startButton;
-    [SerializeField] private Button SettingsButton;
-    [SerializeField] private Button ExitButton;
-    [SerializeField] private Button CreditsButton;
+    [SerializeField] private Button mainMenuButton;
+
 
     [Header("Locations")]
-    [SerializeField] private Location toGameLocation;
-    [SerializeField] private Location toSettingsLocation;
-    [SerializeField] private Location toCreditsLocation;
+    [SerializeField] private Location toMainMenuLocation;
+
 
     private void Start()
     {
-        startButton.onClick.AddListener(OnStartButtonPressed);
-        SettingsButton.onClick.AddListener(OnSettingsButtonPressed);
-    }
+        mainMenuButton.onClick.AddListener(OnMenuButtonPressed);
+   }
 
     private void OnDisable()
     {
-        startButton.onClick.RemoveListener(OnStartButtonPressed);
-        SettingsButton.onClick.RemoveListener(OnSettingsButtonPressed);
+        mainMenuButton.onClick.RemoveListener(OnMenuButtonPressed);
+    
     }
 
-    public void OnStartButtonPressed()
+    public void OnMenuButtonPressed()
     {
-        toGameLocation.Enter();
+        toMainMenuLocation.Enter();
     }
 
-    public void OnSettingsButtonPressed()
-    {
-        toSettingsLocation.Enter();
-    }
+
 
     
 }
