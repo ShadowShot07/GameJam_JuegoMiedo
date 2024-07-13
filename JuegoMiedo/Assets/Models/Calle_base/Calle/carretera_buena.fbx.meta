@@ -3,7 +3,52 @@ guid: fc7eba628a2db9e4baf8ee581befd3e0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Acera
+    second: {fileID: 2100000, guid: b470081032240e545b53365f92c70174, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Acera2
+    second: {fileID: 2100000, guid: 299d0944b75b40d499dc22e21abe6c55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Asfalto
+    second: {fileID: 2100000, guid: aa87a1d68d6ad9542b271c092b5072f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: dc2dbd123e0854240bba51740335b755, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Asphalt026C_1K-PNG_Color
+    second: {fileID: 2800000, guid: 86c78e08fed547d459cb5cbf5dba57a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Asphalt026C_1K-PNG_Color2
+    second: {fileID: 2800000, guid: 9897051600a69c2429a510bdc924357c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Asphalt026C_1K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 9975d2bcb65a95e4aac2083b164c5817, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PavingStones057_1K-PNG_Color
+    second: {fileID: 2800000, guid: a2a2607dd2b218448bb1d12c1d25d489, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PavingStones057_1K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 6a832f93eb65f8543afce3b7e2b0338e, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

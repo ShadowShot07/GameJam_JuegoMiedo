@@ -3,7 +3,87 @@ guid: 3c1cbbe4cb8efb440b305219fadd447b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_material
+    second: {fileID: 2100000, guid: 651bb22e560f52847a664e940d305c44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carroceria
+    second: {fileID: 2100000, guid: 52d51552fd63bdd43a75ed3649052513, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Faro trasero
+    second: {fileID: 2100000, guid: 026cce218e04ecb4c9fa2a44675f8284, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Faro_delantero
+    second: {fileID: 2100000, guid: b7b76cce6bc1b784db7f99dadda63301, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Llanta
+    second: {fileID: 2100000, guid: 7b80b08ab1583eb439cdae7f1c66fa72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lunas
+    second: {fileID: 2100000, guid: 566e70e17694de9428c65d3844d9dbd5, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal041B_1K-PNG_Color
+    second: {fileID: 2800000, guid: cd5c5327a598391449d164dc5faef599, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal041B_1K-PNG_Metalness
+    second: {fileID: 2800000, guid: 74bef2a890be1ed48a8574704922c6bd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal041B_1K-PNG_NormalGL
+    second: {fileID: 2800000, guid: fa28ab4f28d3cb94eb9caa5116e5a616, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal041B_1K-PNG_Roughness
+    second: {fileID: 2800000, guid: e039923f2eeb69c40a722d5d2fe68f4e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PALETA_LLUCO_16
+    second: {fileID: 2800000, guid: 0fd6a0ef72578564ca54653411826bf3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedMetal006_1K-PNG_Color
+    second: {fileID: 2800000, guid: 49289777d8523244fb5951893e7b9eb7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedMetal006_1K-PNG_Metalness
+    second: {fileID: 2800000, guid: 288392eb472d0ca4ba151f1229d0e1ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedMetal006_1K-PNG_NormalGL
+    second: {fileID: 2800000, guid: 2698d7b970dab1e409b6e7ffc9e4bcc7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PaintedMetal006_1K-PNG_Roughness
+    second: {fileID: 2800000, guid: 2da35304e323f034d9540259c680bf16, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: faro
+    second: {fileID: 2800000, guid: b7ada9fdb48ecb34e9502f5aa1338be7, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
