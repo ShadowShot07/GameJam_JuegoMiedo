@@ -10,7 +10,6 @@ public class BankLoading : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("YA SE PUEDE");
         toMenuScene.Enter();
     }
 

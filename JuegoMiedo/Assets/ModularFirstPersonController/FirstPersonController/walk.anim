@@ -68,7 +68,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 1
-    functionName: 
+    functionName: PlaySilence
     data: 
     objectReferenceParameter: {fileID: 4459864850019384750, guid: 8a03904b65a31be4abd8201621e83a5a,
       type: 3}

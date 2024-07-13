@@ -553,8 +553,12 @@ public class FirstPersonController : MonoBehaviour
 
     private void PlayFootsteps()
     {
-        Debug.Log("FOOTSTEP");
         AudioManager.instance.playChildFootstep();
+    }
+
+    private void PlaySilence()
+    {
+        
     }
 }
 
