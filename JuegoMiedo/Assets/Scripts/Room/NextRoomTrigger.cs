@@ -57,6 +57,7 @@ public class NextRoomTrigger : MonoBehaviour
                 {
                     _nextRoom = 0;
                     StartScreamer();
+                    RoomManager.currentAnomaly.AnomalySwitch();
                     RoomManager.currentAnomaly = null;
                 }
                 RoomManager.CambioDeSala(_nextRoom);
@@ -118,6 +119,4 @@ public class NextRoomTrigger : MonoBehaviour
         StartCoroutine(_screamer.IScreamer());
         RoomManager.backCount = 0;
     }
-
-
 }
