@@ -3,7 +3,22 @@ guid: 440be8dbcbf9e164798db36008740fd4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastico blanco
+    second: {fileID: 2100000, guid: 5bf8119a597f6e84da362e501f2f8296, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastico negro
+    second: {fileID: 2100000, guid: 378838e037809c54fad7011b5510d2bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastico rojo
+    second: {fileID: 2100000, guid: 46861e3f6e434fb4e842e3767d1e1e37, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

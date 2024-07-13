@@ -3,7 +3,22 @@ guid: 53a9679667a02944696565b576096186
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastico blanco
+    second: {fileID: 2100000, guid: 5bf8119a597f6e84da362e501f2f8296, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastico negro
+    second: {fileID: 2100000, guid: 378838e037809c54fad7011b5510d2bc, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic001_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 8496263cec976b74d9a6c45f7bd3c0f3, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
