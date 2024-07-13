@@ -1,64 +1,9 @@
 fileFormatVersion: 2
-guid: b17ad318060dc1b4996fda793c856749
+guid: 8c80cd0a422e7f048933e1f07fae609b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MURO
-    second: {fileID: 2100000, guid: 453c17ff3ed227d4bbaaa2399e66be28, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Poster1
-    second: {fileID: 2100000, guid: d1b18ce3fa61fb347bb576bb2c408073, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Poster2
-    second: {fileID: 2100000, guid: f2559fe8205435543832982087be83dd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Poster3
-    second: {fileID: 2100000, guid: 55bf2d25644de3e44b7d27f22e250207, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Concrete042B_1K-PNG_Color
-    second: {fileID: 2800000, guid: e8e81f12d5a00ae4fbc0098106db94d8, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Concrete042B_1K-PNG_Metalness
-    second: {fileID: 2800000, guid: 708f649f1bb794e4781e7b4207a36fe5, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Concrete042B_1K-PNG_NormalGL
-    second: {fileID: 2800000, guid: 4410265cf7fa66649ba54375ca1f3e02, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Concrete042B_1K-PNG_Roughness
-    second: {fileID: 2800000, guid: fd1807e072a411a40b855b1b86a9efe5, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: poster1
-    second: {fileID: 2800000, guid: f13fbd4fee9c7454398c96ce4457e6bd, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: poster2
-    second: {fileID: 2800000, guid: 8a42b6eeb45b4b742a1a704ba0008ce7, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: poster3
-    second: {fileID: 2800000, guid: 59cad61cd7f0e544dad8c6a216672af9, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
