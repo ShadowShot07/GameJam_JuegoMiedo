@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 #if UNITY_EDITOR
     using UnityEditor;
     using System.Net;
@@ -157,7 +158,10 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        if(lockCursor)
+        GameGlobal.instance.inGameMenuOn.AddListener(DisableCamera);
+        GameGlobal.instance.inGameMenuOff.AddListener(EnableCamera);
+
+        if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -213,16 +217,16 @@ public class FirstPersonController : MonoBehaviour
         // Control camera movement
         if(cameraCanMove)
         {
-            yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
+            yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity * GameGlobal.instance.globalSensitivity;
 
             if (!invertCamera)
             {
-                pitch -= mouseSensitivity * Input.GetAxis("Mouse Y");
+                pitch -= mouseSensitivity * Input.GetAxis("Mouse Y") * GameGlobal.instance.globalSensitivity;
             }
             else
             {
                 // Inverted Y
-                pitch += mouseSensitivity * Input.GetAxis("Mouse Y");
+                pitch += mouseSensitivity * Input.GetAxis("Mouse Y") * GameGlobal.instance.globalSensitivity;
             }
 
             // Clamp pitch between lookAngle
@@ -482,6 +486,29 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+
+    }
+
+    private void OnDisable()
+    {
+        GameGlobal.instance.inGameMenuOn.RemoveListener(DisableCamera);
+        GameGlobal.instance.inGameMenuOff.RemoveListener(EnableCamera);
+
+    }
+
+    private void DisableCamera()
+    {
+        cameraCanMove = false;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void EnableCamera()
+    {
+        cameraCanMove = true;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     private void Jump()
     {
         // Adds force to the player rigidbody to jump
