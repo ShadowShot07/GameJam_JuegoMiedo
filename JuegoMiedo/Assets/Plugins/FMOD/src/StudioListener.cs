@@ -17,6 +17,8 @@ namespace FMODUnity
 #endif
         private static List<StudioListener> listeners = new List<StudioListener>();
 
+        public LayerMask occlusionMask;
+
         public static int ListenerCount
         {
             get

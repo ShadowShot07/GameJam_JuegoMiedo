@@ -16,14 +16,5 @@ MonoBehaviour:
     type: 3}
   MinLoadingTime: 2
   locations:
-  - {fileID: 11400000, guid: 66dd0b2c323e1d74bb7d7efe981e8b1a, type: 2}
-  - {fileID: 11400000, guid: 827b4cb0d8602bb48b6e81d782cf7b81, type: 2}
-  AdditiveScenes:
-  - Scene:
-      name: PersistentAdditiveScene
-      asset: {fileID: 102900000, guid: 5ec06a031ffcaa940b066f45ba595b1a, type: 3}
-    DontDestroyOnLoad: 1
-  - Scene:
-      name: AdditiveScene
-      asset: {fileID: 102900000, guid: aee4959c13c8f864189bc8f9ecf0e850, type: 3}
-    DontDestroyOnLoad: 0
+  - {fileID: 11400000, guid: 65907a221756eae4f9af3bf1a5eb7f19, type: 2}
+  AdditiveScenes: []
