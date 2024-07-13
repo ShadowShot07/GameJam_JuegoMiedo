@@ -3,6 +3,7 @@ using UnityEngine;
 public class AnomalysObjects : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
+    [SerializeField] private bool _changeModel;
     [SerializeField] private bool _haveAnomaly = false;
 
     public void AnomalySwitch()
