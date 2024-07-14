@@ -8,6 +8,9 @@ public class FmodEvents : MonoBehaviour
     [field: Header("Main Theme")]
     [field: SerializeField] public EventReference playMainTheme {get; private set;}
 
+    [field: Header("End Theme")]
+    [field: SerializeField] public EventReference playEndTheme { get; private set; }
+
     [field: Header("Game Ambience")]
     [field: SerializeField] public EventReference playGameAmbience { get; private set; }
 
