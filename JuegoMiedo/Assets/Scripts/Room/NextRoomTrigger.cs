@@ -12,10 +12,6 @@ public class NextRoomTrigger : MonoBehaviour
     [SerializeField] private Collider _tpTarget;
     [SerializeField] private Vector3 _zFixOffSet;
 
-    [Header("Enseñar Canvas Final")]
-    [SerializeField] private bool _finalIsActive = false;
-    [SerializeField] private GameObject _finalCanvas;
-
     [Header("Lista de Objetos")]
     [SerializeField] private AnomalysObjects[] _objectsInstantiate;
     [SerializeField] private List<int> _objectsInstantiateIndex;
@@ -24,8 +20,9 @@ public class NextRoomTrigger : MonoBehaviour
     [SerializeField] private int _randomObjectIndex;
     [SerializeField] private float _randomObjects;
 
-    [Header("Screamer")]
+    [Header("Canvas Screamer y Final")]
     [SerializeField] private Screamer _screamer;
+    [SerializeField] private FinalController _finalController;
 
     // Variables de posiciones para los TP
     private Vector3 _playerDirection;
@@ -66,8 +63,7 @@ public class NextRoomTrigger : MonoBehaviour
             else if (RoomManager.currentRoom == RoomManager.finalRoom -1)
             {
                 Debug.Log("Holi estoy en la sala final");
-                _finalIsActive = true;
-                _finalCanvas.SetActive(_finalIsActive);
+                _finalController.StartCanvas();
             }
         }
     }

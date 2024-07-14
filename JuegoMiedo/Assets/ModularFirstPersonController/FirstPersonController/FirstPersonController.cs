@@ -160,6 +160,7 @@ public class FirstPersonController : MonoBehaviour
     {
         GameGlobal.instance.inGameMenuOn.AddListener(DisableCamera);
         GameGlobal.instance.inGameMenuOff.AddListener(EnableCamera);
+        GameGlobal.instance.disablePlayer.AddListener(DisablePlayer);
 
         if (lockCursor)
         {
@@ -486,22 +487,24 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-
-    }
-
     private void OnDisable()
     {
         GameGlobal.instance.inGameMenuOn.RemoveListener(DisableCamera);
         GameGlobal.instance.inGameMenuOff.RemoveListener(EnableCamera);
-
+        GameGlobal.instance.disablePlayer.RemoveListener(DisablePlayer);
     }
 
     private void DisableCamera()
     {
         cameraCanMove = false;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void DisablePlayer()
+    {
+        cameraCanMove = false;
+        playerCanMove = false;
+        anim.SetBool("isWalking", false);
     }
 
     private void EnableCamera()
