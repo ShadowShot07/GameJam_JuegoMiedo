@@ -7,6 +7,7 @@ using FMOD.Studio;
 public class AudioManager : MonoBehaviour
 {
     private EventInstance mainTheme;
+    private EventInstance endTheme;
     private EventInstance gameAmbience;
     private EventInstance childFootsteps;
     private EventInstance heartBeat;
@@ -72,13 +73,14 @@ public class AudioManager : MonoBehaviour
     private void CreateInstances()
     {
         mainTheme = CreateEventInstance(FmodEvents.instance.playMainTheme);
+        endTheme = CreateEventInstance(FmodEvents.instance.playEndTheme);
         gameAmbience = CreateEventInstance(FmodEvents.instance.playGameAmbience);
         childFootsteps = CreateEventInstance(FmodEvents.instance.playChildFootstep);
         scream = CreateEventInstance(FmodEvents.instance.playScream);
         heartBeat = CreateEventInstance(FmodEvents.instance.playHeartBeat);
         anomalyCleaned = CreateEventInstance(FmodEvents.instance.playAnomalyCleaned);
-        //uiAccept = CreateEventInstance(FmodEvents.instance.playUIAccept);
-        //uiCancel = CreateEventInstance(FmodEvents.instance.playUICancel);
+        uiAccept = CreateEventInstance(FmodEvents.instance.playUIAccept);
+        uiCancel = CreateEventInstance(FmodEvents.instance.playUICancel);
     }
 
     public void StartMusic()
@@ -89,6 +91,15 @@ public class AudioManager : MonoBehaviour
     public void StopMusic()
     {
         mainTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+    public void StartEndMusic()
+    {
+        endTheme.start();
+    }
+
+    public void StopEndMusic()
+    {
+        endTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
     public void StartGameAmbience()
     {

@@ -13,7 +13,7 @@ public class NextRoomTrigger : MonoBehaviour
     [SerializeField] private Vector3 _zFixOffSet;
 
     [Header("Lista de Objetos")]
-    [SerializeField] private AnomalysObjects[] _objectsInstantiate;
+    [SerializeField] private GameObject[] _objectsInstantiate;
     [SerializeField] private List<int> _objectsInstantiateIndex;
 
     [Header("Numero Random del index")]
@@ -54,7 +54,7 @@ public class NextRoomTrigger : MonoBehaviour
                 {
                     _nextRoom = 0;
                     StartScreamer();
-                    RoomManager.currentAnomaly.AnomalySwitch();
+                    RoomManager.currentAnomaly.GetComponent<AnomalysObjects>().AnomalySwitch();
                     RoomManager.currentAnomaly = null;
                 }
                 RoomManager.CambioDeSala(_nextRoom);
@@ -88,7 +88,7 @@ public class NextRoomTrigger : MonoBehaviour
         {
             _randomObjectIndex = Random.Range(0, _objectsInstantiateIndex.Count);
             RoomManager.currentAnomaly = _objectsInstantiate[_randomObjectIndex];
-            RoomManager.currentAnomaly.AnomalySwitch();
+            RoomManager.currentAnomaly.GetComponent<AnomalysObjects>().AnomalySwitch();
             _objectsInstantiateIndex.Remove(_randomObjectIndex);
             ResetAnomalyAllObjects();
         }

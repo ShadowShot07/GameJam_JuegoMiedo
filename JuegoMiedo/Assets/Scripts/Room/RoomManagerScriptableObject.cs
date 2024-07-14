@@ -15,7 +15,7 @@ public class RoomManagerScriptableObject : ScriptableObject
     public int backCount;
 
     [Header("Anomalia")]
-    public AnomalysObjects currentAnomaly;
+    public GameObject currentAnomaly;
     public bool cleanAnomalyObjects;
 
     [Header("Eventos")]

@@ -45,6 +45,7 @@ public class MenuInGame : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
+            AudioManager.instance.PlayUIAccept();
             if (isPaused)
             {
                 BackToGame();
@@ -73,6 +74,7 @@ public class MenuInGame : MonoBehaviour
     }
     public void BackToGame()
     {
+        AudioManager.instance.PlayUICancel();
         GameGlobal.instance.inGameMenuOff.Invoke();
         //Close settings panel
         settingsPanel.enabled = false;
@@ -87,6 +89,7 @@ public class MenuInGame : MonoBehaviour
     }
     public void BackToMainMenu()
     {
+        AudioManager.instance.PlayUICancel();
         settingsPanel.enabled = false;
         Time.timeScale = 1;
         toMainMenuLocation.Enter();

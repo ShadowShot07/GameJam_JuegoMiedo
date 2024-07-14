@@ -75,6 +75,7 @@ public class PreviousRoomTrigger : MonoBehaviour
         yield return new WaitForSeconds(3);
         RoomManager.cleanAnomalyObjects = true;
         // Audio tin campanita
+        AudioManager.instance.PlayAnomalyCleaned();
         Debug.Log("Ta limpio");
     }
 
