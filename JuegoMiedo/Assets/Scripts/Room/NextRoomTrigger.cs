@@ -64,6 +64,7 @@ public class NextRoomTrigger : MonoBehaviour
             {
                 Debug.Log("Holi estoy en la sala final");
                 _finalController.StartCanvas();
+                RoomManager.currentRoom = 0;
             }
         }
     }

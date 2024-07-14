@@ -12,8 +12,8 @@ public class MenuInGame : MonoBehaviour
     [SerializeField] private Button closeSettings;
     [SerializeField] private Slider mouseSensvtySlider;
 
+    [SerializeField] private GameObject _playerUI;
     [SerializeField] private Location toMainMenuLocation;
-    
     [SerializeField] private Canvas settingsPanel;
 
 
@@ -67,6 +67,8 @@ public class MenuInGame : MonoBehaviour
         Time.timeScale = 0;
         isPaused = true;
 
+        _playerUI.SetActive(false);
+
         //Enable buttons
         mouseSensvtySlider.value = GameGlobal.instance.globalSensitivity;
         closeSettings.onClick.AddListener(BackToGame);
@@ -82,6 +84,8 @@ public class MenuInGame : MonoBehaviour
         //Play game
         Time.timeScale = 1;
         isPaused = false;
+
+        _playerUI.SetActive(true);
 
         //Disable buttons
         closeSettings.onClick.RemoveListener(BackToGame);

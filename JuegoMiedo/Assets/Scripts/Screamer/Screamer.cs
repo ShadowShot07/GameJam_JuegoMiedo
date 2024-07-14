@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class Screamer : MonoBehaviour
 {
-    [SerializeField] private  GameObject canvasScreamer;
     [SerializeField] private float elapsed = 0f;
     [SerializeField] private float currentMagnitude = 1f;
     [SerializeField] private float duration = 1f;
     [SerializeField] private GameObject _camera;
+    [SerializeField] private GameObject _screamerObject;
 
     private void Start()
     {
-        canvasScreamer.SetActive(false);
+        
     }
 
     public IEnumerator IScreamer()
@@ -19,7 +19,8 @@ public class Screamer : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         AudioManager.instance.PlayScream();
-
+        _screamerObject.SetActive(true);
+        _screamerObject.transform.position = _camera.transform.position + _camera.transform.forward;
         while (elapsed < duration)
         {
             float x = (Random.value - 0.5f) * currentMagnitude;
@@ -29,10 +30,10 @@ public class Screamer : MonoBehaviour
 
             elapsed += Time.deltaTime;
             currentMagnitude = (1 - (elapsed / duration)) * (1 - (elapsed / duration));
-            canvasScreamer.SetActive(true);
+
             yield return null;
         }
         _camera.transform.localPosition = Vector3.zero;
-        canvasScreamer.SetActive(false);
+        _screamerObject.SetActive(false);
     }
 }

@@ -6,6 +6,7 @@ public class FinalController : MonoBehaviour
     [SerializeField] private Animator _finalAnimator;
     [SerializeField] private GameObject _finalCanvas;
     [SerializeField] private Location toMainMenu;
+    [SerializeField] private GameObject _player;
     
     public void StartCanvas()
     {
@@ -15,6 +16,8 @@ public class FinalController : MonoBehaviour
         _finalCanvas.SetActive(true);
         _finalAnimator.Play("AnimacionDelFinal");
         GameGlobal.instance.disablePlayer.Invoke();
+
+        _player.SetActive(false);
     }
 
     public void StopCanvas()

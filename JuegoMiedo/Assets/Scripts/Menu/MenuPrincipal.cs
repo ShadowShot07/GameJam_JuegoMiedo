@@ -37,6 +37,7 @@ public class MenuPrincipal : MonoBehaviour
         startButton.onClick.AddListener(OnStartButtonPressed);
         SettingsButton.onClick.AddListener(OnSettingsButtonPressed);
         startExitMenu.onClick.AddListener(OnExitMenuButtonPressed);
+        Cursor.lockState = CursorLockMode.None;
 
         AudioManager.instance.StartMusic();
     }

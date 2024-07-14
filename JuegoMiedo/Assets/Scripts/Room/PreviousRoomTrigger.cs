@@ -67,6 +67,7 @@ public class PreviousRoomTrigger : MonoBehaviour
 
     private void ResetAnomalyObjects()
     {
+        RoomManager.currentAnomaly.GetComponent<AnomalysObjects>().AnomalySwitch();
         RoomManager.currentAnomaly = null;
     }
 
