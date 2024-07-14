@@ -18,6 +18,8 @@ public class Screamer : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
 
+        AudioManager.instance.PlayScream();
+
         while (elapsed < duration)
         {
             float x = (Random.value - 0.5f) * currentMagnitude;

@@ -48,6 +48,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void OnStartButtonPressed()
     {
+        AudioManager.instance.PlayUIAccept();
         toGameLocation.Enter();
         AudioManager.instance.StopMusic();
     }
@@ -55,12 +56,14 @@ public class MenuPrincipal : MonoBehaviour
     //Settings button
     public void OnSettingsButtonPressed()
     {
+        AudioManager.instance.PlayUIAccept();
         settingsPanel.enabled = true;
         mouseSensvtySlider.value = GameGlobal.instance.globalSensitivity;
         closeSettings.onClick.AddListener(OnCloseSettingsButtonPressed);
     }
     public void OnCloseSettingsButtonPressed()
     {
+        AudioManager.instance.PlayUICancel();
         settingsPanel.enabled = false;
     }
 
@@ -72,11 +75,13 @@ public class MenuPrincipal : MonoBehaviour
     //Credits button
     public void OnCreditsButtonPressed()
     {
+        AudioManager.instance.PlayUIAccept();
         creditsPanel.enabled = true;
         closeCredits.onClick.AddListener(OnCloseCreditsButtonPressed);
     }
     public void OnCloseCreditsButtonPressed()
     {
+        AudioManager.instance.PlayUICancel();
         creditsPanel.enabled = false;
     }
 }
