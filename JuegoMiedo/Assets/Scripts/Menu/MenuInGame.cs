@@ -61,7 +61,6 @@ public class MenuInGame : MonoBehaviour
         settingsPanel.SetActive(true);
 
         //Pause game
-        Time.timeScale = 0;
         isPaused = true;
 
         _playerUI.SetActive(false);
@@ -79,7 +78,6 @@ public class MenuInGame : MonoBehaviour
         settingsPanel.SetActive(false);
 
         //Play game
-        Time.timeScale = 1;
         isPaused = false;
 
         _playerUI.SetActive(true);
@@ -92,8 +90,6 @@ public class MenuInGame : MonoBehaviour
     {
         AudioManager.instance.PlayUICancel();
         settingsPanel.SetActive(false);
-        Time.timeScale = 1;
         toMainMenuLocation.Enter();
     }
-
 }
