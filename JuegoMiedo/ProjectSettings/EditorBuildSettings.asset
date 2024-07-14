@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 4b356f192aab87b4c96370665c740c57
   - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
-    guid: c386941ee73bfb44ebb5cf1f355b8370
+    guid: 6c4019ac62c4eb848b8c24dce7eb97d2
   - enabled: 1
     path: Assets/Scenes/BankLoading.unity
     guid: 968960b1e36ccf84ead007d4c3f31d0e
@@ -19,10 +19,7 @@ EditorBuildSettings:
     guid: f073e6031dc655d49b232a564a2c728c
   - enabled: 1
     path: Assets/Scenes/EscenaPruebaEscenario.unity
-    guid: c664180c4cabada4ca774972fa153e4a
-  - enabled: 1
-    path: Assets/Scenes/EscenaPruebasJavi.unity
-    guid: 588d3a778cff87840ae5e8434aaceb43
+    guid: dafee44ebe88b8841b819134e829638a
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e211279e796a23b40b6052e83f1925a6,
       type: 2}

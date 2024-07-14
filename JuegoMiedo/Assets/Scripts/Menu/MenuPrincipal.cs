@@ -1,41 +1,42 @@
 using Runemark.SCEMA;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MenuPrincipal : MonoBehaviour
 {
     [Header("Main Menu")]
-    
+    [SerializeField] private GameObject mainMenu;
     [SerializeField] private Button startButton;
     [SerializeField] private Button SettingsButton;
-    [SerializeField] private Button ExitButton;
-    [SerializeField] private Button CreditsButton;
+    [SerializeField] private Button startExitMenu;
+    [SerializeField] private GraphicRaycaster MenuEntero;
 
     [SerializeField] private Location toGameLocation;
 
     [Header("SubMenus")]
     [SerializeField] private Button closeSettings;
-    [SerializeField] private Button closeCredits;
-
     [SerializeField] private Slider mouseSensvtySlider;
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject exitPanel;
 
-    [SerializeField] private Canvas settingsPanel;
-    [SerializeField] private Canvas creditsPanel;
+    [Header("Menu Exit")]
+    [SerializeField] private Button enterbutton;
+    [SerializeField] private Button exitButton;
 
 
 
     private void Start()
     {
-        settingsPanel.enabled = false;
-        creditsPanel.enabled = false;
+        settingsPanel.SetActive(false);
 
         mouseSensvtySlider.onValueChanged.AddListener(OnSensitivityChange);
-
         startButton.onClick.AddListener(OnStartButtonPressed);
         SettingsButton.onClick.AddListener(OnSettingsButtonPressed);
-        CreditsButton.onClick.AddListener(OnCreditsButtonPressed);
+        startExitMenu.onClick.AddListener(OnExitMenuButtonPressed);
 
         AudioManager.instance.StartMusic();
     }
@@ -57,14 +58,16 @@ public class MenuPrincipal : MonoBehaviour
     public void OnSettingsButtonPressed()
     {
         AudioManager.instance.PlayUIAccept();
-        settingsPanel.enabled = true;
+        settingsPanel.SetActive(true);
+        mainMenu.SetActive(false);
         mouseSensvtySlider.value = GameGlobal.instance.globalSensitivity;
         closeSettings.onClick.AddListener(OnCloseSettingsButtonPressed);
     }
     public void OnCloseSettingsButtonPressed()
     {
         AudioManager.instance.PlayUICancel();
-        settingsPanel.enabled = false;
+        settingsPanel.SetActive(false);
+        mainMenu.SetActive(true);
     }
 
     private void OnSensitivityChange(float sensitivityValue)
@@ -72,16 +75,32 @@ public class MenuPrincipal : MonoBehaviour
         GameGlobal.instance.globalSensitivity = sensitivityValue;
     }
 
+    private void OnExitMenuButtonPressed()
+    {
+        exitPanel.SetActive(true);
+        MenuEntero.enabled = false;
+        enterbutton.onClick.AddListener(OnEnterButtonPressed);
+        exitButton.onClick.AddListener(OnExitButtonPressed);
+    }
+
+    private void OnEnterButtonPressed()
+    {
+        exitPanel.SetActive(false);
+        MenuEntero.enabled = true;
+    }
+
+    private void OnExitButtonPressed()
+    {
+        Application.Quit();
+    }
+
     //Credits button
     public void OnCreditsButtonPressed()
     {
         AudioManager.instance.PlayUIAccept();
-        creditsPanel.enabled = true;
-        closeCredits.onClick.AddListener(OnCloseCreditsButtonPressed);
     }
     public void OnCloseCreditsButtonPressed()
     {
         AudioManager.instance.PlayUICancel();
-        creditsPanel.enabled = false;
     }
 }
