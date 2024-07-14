@@ -16,5 +16,5 @@ MonoBehaviour:
   LoadingScreen: {fileID: 0}
   Scene:
     name: MenuPrincipal
-    asset: {fileID: 102900000, guid: c386941ee73bfb44ebb5cf1f355b8370, type: 3}
+    asset: {fileID: 102900000, guid: 6c4019ac62c4eb848b8c24dce7eb97d2, type: 3}
   additiveScenes: []

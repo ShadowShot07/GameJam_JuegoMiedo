@@ -14,20 +14,17 @@ public class MenuInGame : MonoBehaviour
 
     [SerializeField] private GameObject _playerUI;
     [SerializeField] private Location toMainMenuLocation;
-    [SerializeField] private Canvas settingsPanel;
-
-
+    [SerializeField] private GameObject settingsPanel;
 
     private void Start()
     {
-        settingsPanel.enabled = false;
+        settingsPanel.SetActive(false);
         mouseSensvtySlider.onValueChanged.AddListener(OnSensitivityChange);
     }
     
     private void Update()
     {
         OpenMenu();
-
     }
 
     private void OnDisable()
@@ -61,7 +58,7 @@ public class MenuInGame : MonoBehaviour
     {
         GameGlobal.instance.inGameMenuOn.Invoke();
         //Show settings panel
-        settingsPanel.enabled = true;
+        settingsPanel.SetActive(true);
 
         //Pause game
         Time.timeScale = 0;
@@ -79,7 +76,7 @@ public class MenuInGame : MonoBehaviour
         AudioManager.instance.PlayUICancel();
         GameGlobal.instance.inGameMenuOff.Invoke();
         //Close settings panel
-        settingsPanel.enabled = false;
+        settingsPanel.SetActive(false);
 
         //Play game
         Time.timeScale = 1;
@@ -94,7 +91,7 @@ public class MenuInGame : MonoBehaviour
     public void BackToMainMenu()
     {
         AudioManager.instance.PlayUICancel();
-        settingsPanel.enabled = false;
+        settingsPanel.SetActive(false);
         Time.timeScale = 1;
         toMainMenuLocation.Enter();
     }
