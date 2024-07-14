@@ -342,7 +342,7 @@ MonoBehaviour:
 
     Enlazador
 
-    Carlos'
+    Charliehippie'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7f78ebc321a74c41be8725ce432eb79, type: 2}
   m_sharedMaterial: {fileID: 7920590803250048269, guid: c7f78ebc321a74c41be8725ce432eb79,
@@ -964,7 +964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71.38757, y: 317.16467}
+  m_AnchoredPosition: {x: -71.38757, y: 413}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5560555185648979228
