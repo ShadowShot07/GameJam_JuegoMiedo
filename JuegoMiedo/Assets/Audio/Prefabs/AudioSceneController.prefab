@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f2a6b301636c144b95410ed3fd953d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scarySoundAverageTime: 20
+  scarySoundAverageTime: 8
   scarySoundTimeRandomize: 5
   scarySoundObject: {fileID: 2212150049468650742}
   scaryObjectRandomizePosition: {x: 10, y: 1, z: 15}
