@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7130a04b47a6a4aac608d87e0fafa7, type: 3}
   m_Name: RoomManagerScriptableObject
   m_EditorClassIdentifier: 
-  _room: 4
-  currentRoom: 4
+  _room: 0
+  currentRoom: 0
   finalRoom: 5
   backCount: 0
   currentAnomaly: {fileID: 0}

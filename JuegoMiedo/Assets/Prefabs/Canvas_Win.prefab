@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5297173305831127575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1693080295021496299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -222,13 +222,14 @@ GameObject:
   - component: {fileID: 5555280292699163209}
   - component: {fileID: 4413529181373635667}
   - component: {fileID: 693684522072215921}
+  - component: {fileID: 7455535788326919261}
   m_Layer: 5
   m_Name: Canvas_Win
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6435713058520679142
 RectTransform:
   m_ObjectHideFlags: 0
@@ -334,3 +335,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7455535788326919261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5984181064532369086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6904aaba9d4ff5749af989a6e537c34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _finalAnimator: {fileID: 693684522072215921}
+  _finalCanvas: {fileID: 5984181064532369086}
