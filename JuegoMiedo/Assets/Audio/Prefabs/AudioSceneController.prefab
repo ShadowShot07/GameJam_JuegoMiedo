@@ -79,4 +79,4 @@ MonoBehaviour:
   scarySoundAverageTime: 10
   scarySoundTimeRandomize: 0
   scarySoundObject: {fileID: 2212150049468650742}
-  scaryObjectRandomizePosition: {x: 1, y: 0, z: 1}
+  scaryObjectRandomizePosition: {x: 1, y: 0.5, z: 1}

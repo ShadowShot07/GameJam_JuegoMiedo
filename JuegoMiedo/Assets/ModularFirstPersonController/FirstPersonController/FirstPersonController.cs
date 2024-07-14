@@ -139,7 +139,6 @@ public class FirstPersonController : MonoBehaviour
         if (TryGetComponent<Animator>(out Animator  animator))
         {
             anim = animator;
-            Debug.Log("Animator: " + anim);
         }
 
         crosshairObject = GetComponentInChildren<Image>();

@@ -57,6 +57,7 @@ public class AudioManager : MonoBehaviour
         }
 
         masterBus = RuntimeManager.GetBus("bus:/");
+        musicBus = RuntimeManager.GetBus("bus:/Music");
         ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
 
@@ -151,7 +152,7 @@ public class AudioManager : MonoBehaviour
                 break;
             case BusType.MUSIC:
                 musicVolume = newVolume;
-                musicBus.setVolume(masterVolume);
+                musicBus.setVolume(musicVolume);
                 break;
             case BusType.AMBIENCE:
                 ambienceVolume = newVolume;
