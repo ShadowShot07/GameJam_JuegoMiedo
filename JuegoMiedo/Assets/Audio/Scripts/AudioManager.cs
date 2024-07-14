@@ -7,29 +7,35 @@ using FMOD.Studio;
 public class AudioManager : MonoBehaviour
 {
     private EventInstance mainTheme;
-    private EventInstance gameTheme;
+    private EventInstance gameAmbience;
     private EventInstance childFootsteps;
     private EventInstance heartBeat;
+    private EventInstance scream;
+    private EventInstance anomalyCleaned;
     private EventInstance uiAccept;
     private EventInstance uiCancel;
 
 
     [Header("Volume")]
     [Range(0, 1)]
-    public float masterVolume = 1f;
+    public float masterVolume = .8f;
     [Range(0, 1)]
-    public float musicVolume = 1f;
+    public float musicVolume = .8f;
     [Range(0, 1)]
-    public float sfxVolume = 1f;
+    public float ambienceVolume = .8f;
+    [Range(0, 1)]
+    public float sfxVolume = .8f;
 
     private Bus masterBus;
     private Bus musicBus;
+    private Bus ambienceBus;
     private Bus sfxBus;
 
     public enum BusType
     {
         MASTER,
         MUSIC,
+        AMBIENCE,
         SFX
     }
 
@@ -50,9 +56,9 @@ public class AudioManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
 
-        //masterBus = RuntimeManager.GetBus("bus:/");
-        //musicBus = RuntimeManager.GetBus("bus:/Music");
-        //sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        masterBus = RuntimeManager.GetBus("bus:/");
+        ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
+        sfxBus = RuntimeManager.GetBus("bus:/SFX");
 
         //CreateInstances();
     }
@@ -64,10 +70,12 @@ public class AudioManager : MonoBehaviour
 
     private void CreateInstances()
     {
-        //mainTheme = CreateEventInstance(FmodEvents.instance.playMainTheme);
+        mainTheme = CreateEventInstance(FmodEvents.instance.playMainTheme);
+        gameAmbience = CreateEventInstance(FmodEvents.instance.playGameAmbience);
         childFootsteps = CreateEventInstance(FmodEvents.instance.playChildFootstep);
-        //heartBeat = CreateEventInstance(FmodEvents.instance.playHeartBeat);
-        //gameTheme = CreateEventInstance(FmodEvents.instance.playGameTheme);
+        scream = CreateEventInstance(FmodEvents.instance.playScream);
+        heartBeat = CreateEventInstance(FmodEvents.instance.playHeartBeat);
+        anomalyCleaned = CreateEventInstance(FmodEvents.instance.playAnomalyCleaned);
         //uiAccept = CreateEventInstance(FmodEvents.instance.playUIAccept);
         //uiCancel = CreateEventInstance(FmodEvents.instance.playUICancel);
     }
@@ -81,14 +89,14 @@ public class AudioManager : MonoBehaviour
     {
         mainTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
-    public void StartGameMusic()
+    public void StartGameAmbience()
     {
-        gameTheme.start();
+        gameAmbience.start();
     }
 
-    public void StopGameMusic()
+    public void StopGameAmbience()
     {
-        gameTheme.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        gameAmbience.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void playChildFootstep()
@@ -96,9 +104,25 @@ public class AudioManager : MonoBehaviour
         childFootsteps.start();
     }
 
-    public void PlayClimbing()
+    public void PlayHeartBeat()
     {
         heartBeat.start();
+    }
+
+    public void PlayScream()
+    {
+        scream.start();
+        heartBeat.start();
+    }
+
+    public void PlayAnomalyCleaned()
+    {
+        anomalyCleaned.start();  
+    }
+
+    public void PlayScarySound(GameObject soundObject)
+    {
+        RuntimeManager.PlayOneShotAttached(FmodEvents.instance.playScarySound, soundObject);
     }
 
     public void PlayUIAccept()
@@ -127,7 +151,11 @@ public class AudioManager : MonoBehaviour
                 break;
             case BusType.MUSIC:
                 musicVolume = newVolume;
-                musicBus.setVolume(musicVolume);
+                musicBus.setVolume(masterVolume);
+                break;
+            case BusType.AMBIENCE:
+                ambienceVolume = newVolume;
+                ambienceBus.setVolume(ambienceVolume);
                 break;
             case BusType.SFX:
                 sfxVolume = newVolume;

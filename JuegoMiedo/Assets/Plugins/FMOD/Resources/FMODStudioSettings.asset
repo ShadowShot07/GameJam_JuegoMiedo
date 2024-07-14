@@ -342,6 +342,8 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - NonAmbience
+  - NonMusic
   - NonSFX
   BanksToLoad: []
   LiveUpdatePort: 9264
