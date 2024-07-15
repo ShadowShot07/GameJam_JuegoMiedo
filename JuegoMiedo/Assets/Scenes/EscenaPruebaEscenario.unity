@@ -461,6 +461,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1878273536}
     m_Modifications:
+    - target: {fileID: 84006455040663178, guid: d46d8ae6212b81747a90280548a5f6ae,
+        type: 3}
+      propertyPath: scaryObjectRandomizePosition.z
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4972014193528605576, guid: d46d8ae6212b81747a90280548a5f6ae,
         type: 3}
       propertyPath: m_Name
