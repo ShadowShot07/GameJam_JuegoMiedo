@@ -27,7 +27,7 @@ public class MenuInGame : MonoBehaviour
     
     private void Update()
     {
-        if(!isActiveAndEnabled)
+        if(!inGameMenuIsDisable)
         {
             OpenMenu();
         }
