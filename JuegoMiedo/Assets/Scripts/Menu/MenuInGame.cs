@@ -97,6 +97,7 @@ public class MenuInGame : MonoBehaviour
     public void DisableInGameMenu()
     {
         inGameMenuIsDisable = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void BackToMainMenu()
