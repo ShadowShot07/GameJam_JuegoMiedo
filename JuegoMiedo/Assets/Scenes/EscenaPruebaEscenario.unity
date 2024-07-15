@@ -791,6 +791,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 890824345819704331, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: _escenario
+      value: 
+      objectReference: {fileID: 883259466168468602}
+    - target: {fileID: 890824345819704331, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: _screamerPrefab
+      value: 
+      objectReference: {fileID: 883259466168468603}
     - target: {fileID: 1035153655188226562, guid: 659f5e8d90649754fa00302e2af25ec5,
         type: 3}
       propertyPath: m_Mesh
@@ -1020,6 +1030,18 @@ Light:
 --- !u!1 &883259466168468601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1687309701440595583, guid: 659f5e8d90649754fa00302e2af25ec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 883259466168468599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &883259466168468602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8276541734726548587, guid: 659f5e8d90649754fa00302e2af25ec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 883259466168468599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &883259466168468603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2350290487573165244, guid: 659f5e8d90649754fa00302e2af25ec5,
     type: 3}
   m_PrefabInstance: {fileID: 883259466168468599}
   m_PrefabAsset: {fileID: 0}

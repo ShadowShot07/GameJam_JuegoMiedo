@@ -7,17 +7,20 @@ public class Screamer : MonoBehaviour
     [SerializeField] private float currentMagnitude = 1f;
     [SerializeField] private float duration = 1f;
     [SerializeField] private GameObject _camera;
-    [SerializeField] private GameObject _screamerObject;
+    [SerializeField] private GameObject _screamerPrefab;
+    [SerializeField] private GameObject _escenario;
 
     public IEnumerator IScreamer()
     {
         yield return new WaitForSeconds(1.5f);
 
         AudioManager.instance.PlayScream();
-        _screamerObject.SetActive(true);
-        _screamerObject.transform.SetParent(_camera.transform);
-        _screamerObject.transform.position = _camera.transform.position + _camera.transform.forward;
-        
+
+        _screamerPrefab.transform.SetParent(_camera.transform);
+        _screamerPrefab.transform.position = _camera.transform.position + _camera.transform.forward;
+        _screamerPrefab.transform.LookAt(_camera.transform.position);
+        _screamerPrefab.SetActive(true);
+
         while (elapsed < duration)
         {
             float x = (Random.value - 0.5f) * currentMagnitude;
@@ -31,6 +34,8 @@ public class Screamer : MonoBehaviour
             yield return null;
         }
         _camera.transform.localPosition = Vector3.zero;
-        _screamerObject.SetActive(false);
+        _screamerPrefab.transform.SetParent(_escenario.transform);
+        _screamerPrefab.SetActive(false);
+        elapsed = 0f;
     }
 }
