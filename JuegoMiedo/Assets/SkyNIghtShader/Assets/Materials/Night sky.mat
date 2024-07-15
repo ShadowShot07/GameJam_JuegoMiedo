@@ -68,12 +68,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Brightness: 1.76
+    - _Brightness: 1.3
     - _BrightnessMod: 4
     - _BumpScale: 1
     - _Cutoff: 0.5
+<<<<<<< Updated upstream
     - _Density: 0.91
     - _DensityMod: 3
+=======
+    - _Density: 2.91
+    - _DensityMod: 1.717
+>>>>>>> Stashed changes
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnableBackgroundNoise: 1
@@ -81,7 +86,11 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+<<<<<<< Updated upstream
     - _Layers: 4.07
+=======
+    - _Layers: 3.12
+>>>>>>> Stashed changes
     - _MaxStarSize: 0.87
     - _Metallic: 0
     - _MinStarSize: 0.57
