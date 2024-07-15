@@ -17,21 +17,27 @@ public class MenuInGame : MonoBehaviour
     [SerializeField] private Location toMainMenuLocation;
     [SerializeField] private GameObject settingsPanel;
 
+    [SerializeField] private bool inGameMenuIsDisable = false;
     private void Start()
     {
         settingsPanel.SetActive(false);
         mouseSensvtySlider.onValueChanged.AddListener(OnSensitivityChange);
+        GameGlobal.instance.disablePlayer.AddListener(DisableInGameMenu);
     }
     
     private void Update()
     {
-        OpenMenu();
+        if(!isActiveAndEnabled)
+        {
+            OpenMenu();
+        }
     }
 
     private void OnDisable()
     {
         closeSettings.onClick.RemoveListener(BackToGame);
         mainMenuButton.onClick.RemoveListener(BackToMainMenu);
+        GameGlobal.instance.disablePlayer.RemoveListener(DisableInGameMenu);
     }
 
     private void OnSensitivityChange(float sensitivityValue)
@@ -87,6 +93,12 @@ public class MenuInGame : MonoBehaviour
         closeSettings.onClick.RemoveListener(BackToGame);
         mainMenuButton.onClick.RemoveListener(BackToMainMenu);
     }
+
+    public void DisableInGameMenu()
+    {
+        inGameMenuIsDisable = true;
+    }
+
     public void BackToMainMenu()
     {
         AudioManager.instance.PlayUICancel();
