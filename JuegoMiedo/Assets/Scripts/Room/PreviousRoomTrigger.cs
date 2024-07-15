@@ -85,6 +85,7 @@ public class PreviousRoomTrigger : MonoBehaviour
         {
             RoomManager.backCount = 0;
             StartCoroutine(_screamer.IScreamer());
+            _previousRoom = 0;
         }
     }
 }
