@@ -668,11 +668,7 @@ RectTransform:
   - {fileID: 3256817612050556271}
   - {fileID: 3072920058361697123}
   - {fileID: 8646971485147716833}
-<<<<<<< Updated upstream
   - {fileID: 4980412275111848820}
-=======
-  - {fileID: 7667020096544363487}
->>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2304,13 +2300,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 290.205, y: -32.8}
   m_SizeDelta: {x: 261.3552, y: 65.6009}
-=======
-  m_AnchoredPosition: {x: 321, y: 158}
-  m_SizeDelta: {x: 424.9452, y: 65.6009}
->>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8055040426796791015
 CanvasRenderer:
@@ -2340,17 +2331,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< Updated upstream
   m_text: Anomalies Discovered
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7f78ebc321a74c41be8725ce432eb79, type: 2}
   m_sharedMaterial: {fileID: 7920590803250048269, guid: c7f78ebc321a74c41be8725ce432eb79,
-=======
-  m_text: ANOMALIES DISCOVERED
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0867b45c1c9513b4992fa65bf1c3bba5, type: 2}
-  m_sharedMaterial: {fileID: -2253515986431508836, guid: 0867b45c1c9513b4992fa65bf1c3bba5,
->>>>>>> Stashed changes
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4971,11 +4955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< Updated upstream
   m_IsActive: 0
-=======
-  m_IsActive: 1
->>>>>>> Stashed changes
 --- !u!224 &7667020096544363487
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4984,16 +4964,11 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7785452789390236590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0.93708605}
-=======
-  m_LocalPosition: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2653461955619448632}
-<<<<<<< Updated upstream
   - {fileID: 6832728632022927573}
   m_Father: {fileID: 4980412275111848820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5002,15 +4977,6 @@ RectTransform:
   m_AnchoredPosition: {x: -620.4657, y: -157.98834}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
-=======
-  m_Father: {fileID: 4856863922167687613}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.34137, y: -7.8948975}
-  m_SizeDelta: {x: -1920, y: -1080}
-  m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> Stashed changes
 --- !u!222 &5409627695184841181
 CanvasRenderer:
   m_ObjectHideFlags: 0
