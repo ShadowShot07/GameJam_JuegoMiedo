@@ -17,6 +17,8 @@ public class AudioSceneController : MonoBehaviour
 
     private GameObject player;
 
+    private bool isActive = true;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -24,13 +26,25 @@ public class AudioSceneController : MonoBehaviour
         scaryTime = scarySoundAverageTime + Random.Range(-scarySoundTimeRandomize, scarySoundTimeRandomize);
     }
 
+    private void OnEnable()
+    {
+        GameGlobal.instance.disablePlayer.AddListener(OnEnd);
+    }
+    private void OnDisable()
+    {
+        GameGlobal.instance.disablePlayer.RemoveListener(OnEnd);
+    }
+
     private void Update()
     {
-        time += Time.deltaTime;
-        if (time >= scaryTime)
+        if (isActive)
         {
-            PlayScarySoundFromScaryObject();
-            time = 0f;
+            time += Time.deltaTime;
+            if (time >= scaryTime)
+            {
+                PlayScarySoundFromScaryObject();
+                time = 0f;
+            }
         }
     }
 
@@ -58,5 +72,9 @@ public class AudioSceneController : MonoBehaviour
         return objectPosition;
     }
 
+    private void OnEnd()
+    {
+        isActive = false;
+    }
 
 }

@@ -76,6 +76,8 @@ public class PreviousRoomTrigger : MonoBehaviour
         RoomManager.cleanAnomalyObjects = true;
         // Audio tin campanita
         AudioManager.instance.PlayAnomalyCleaned();
+        int anomalyIndex = _tpTarget.GetComponent<NextRoomTrigger>().GetAnomalyIndex();
+        GameGlobal.instance.newAnomalyCleaned.Invoke(anomalyIndex);
         Debug.Log("Ta limpio");
     }
 

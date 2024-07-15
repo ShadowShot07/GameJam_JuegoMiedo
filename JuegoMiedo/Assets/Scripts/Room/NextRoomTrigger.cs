@@ -126,4 +126,9 @@ public class NextRoomTrigger : MonoBehaviour
         StartCoroutine(_screamer.IScreamer());
         RoomManager.backCount = 0;
     }
+
+    public int GetAnomalyIndex()
+    {
+        return _randomObjectIndex;
+    }
 }

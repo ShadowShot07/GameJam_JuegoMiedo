@@ -12,6 +12,7 @@ public class GameGlobal : MonoBehaviour
     public UnityEvent inGameMenuOn;
     public UnityEvent inGameMenuOff;
     public UnityEvent disablePlayer;
+    public UnityEvent<int> newAnomalyCleaned;
 
 
     void Awake()
