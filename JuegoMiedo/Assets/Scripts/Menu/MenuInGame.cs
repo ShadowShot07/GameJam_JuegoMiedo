@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MenuInGame : MonoBehaviour
 {
+    [SerializeField] private RoomManagerScriptableObject roomManagerScriptableObject;
     [SerializeField] private bool isPaused = false;
     [Header("Settings Menu")]
     [SerializeField] private Button mainMenuButton;
@@ -90,6 +91,7 @@ public class MenuInGame : MonoBehaviour
     {
         AudioManager.instance.PlayUICancel();
         settingsPanel.SetActive(false);
+        roomManagerScriptableObject.currentRoom = 0;
         toMainMenuLocation.Enter();
     }
 }

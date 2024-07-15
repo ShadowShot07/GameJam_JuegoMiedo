@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 7123472928631710304}
   - component: {fileID: 5391874648345857764}
   m_Layer: 0
-  m_Name: FarolaConAnomalia (Missing Prefab with guid_ 345e18b766869144ab1e3f0052cc7cbf)
+  m_Name: FarolaConAnomalia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -31,9 +31,8 @@ public class PreviousRoomTrigger : MonoBehaviour
                 Debug.Log("Para atras no hay nada mas bobo");
                 _collider.isTrigger = false;
             }
-            else if (RoomManager.currentRoom >= 1 && RoomManager.currentRoom != RoomManager.finalRoom)
+            else if (RoomManager.currentRoom >= 1)
             {
-                _collider.isTrigger = true;
                 _previousRoom = RoomManager.currentRoom - 1;
                 
                 if (RoomManager.currentAnomaly == null)

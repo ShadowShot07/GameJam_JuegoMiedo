@@ -10,10 +10,7 @@ public class ChangeAvenue : MonoBehaviour
 
     private void Update()
     {
-        if (_currentTexture != RoomManagerScriptableObject.currentRoom)
-        {
-            ChangeAvenueNumber();
-        }
+        ChangeAvenueNumber();
     }
 
     private void ChangeAvenueNumber()

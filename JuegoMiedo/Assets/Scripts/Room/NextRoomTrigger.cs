@@ -45,6 +45,7 @@ public class NextRoomTrigger : MonoBehaviour
             _playerDirection = other.gameObject.transform.position - transform.position;
             if (RoomManager.currentRoom >= 0 && RoomManager.currentRoom < RoomManager.finalRoom -1)
             {
+                _tpTarget.isTrigger = true;
                 if (RoomManager.currentAnomaly == null)
                 {
                     _nextRoom = RoomManager.currentRoom + 1;

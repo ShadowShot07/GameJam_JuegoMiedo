@@ -806,11 +806,56 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 255991324}
+    - target: {fileID: 3725864656838519309, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725864656838519309, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725864656838519309, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725864656838519309, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725864656838519309, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725864656838519309, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725864656838519309, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725864656838519309, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 3839101282598763210, guid: 659f5e8d90649754fa00302e2af25ec5,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 255991324}
+    - target: {fileID: 4204644268989813007, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: enableCrouch
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5795131374209393692, guid: 659f5e8d90649754fa00302e2af25ec5,
         type: 3}
       propertyPath: m_Mesh
@@ -865,16 +910,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6166752266447137446, guid: 659f5e8d90649754fa00302e2af25ec5,
-        type: 3}
-      propertyPath: _currentTexture
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7674688701942948456, guid: 659f5e8d90649754fa00302e2af25ec5,
-        type: 3}
-      propertyPath: m_RenderShadows
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7963773100239581391, guid: 659f5e8d90649754fa00302e2af25ec5,
         type: 3}
@@ -971,6 +1006,12 @@ PrefabInstance:
       propertyPath: _playerUI
       value: 
       objectReference: {fileID: 883259466168468601}
+    - target: {fileID: 5521400593863807928, guid: ace9d57ea570ceb4887ed79c5ff9d31c,
+        type: 3}
+      propertyPath: roomManagerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 463bb4e2d1312b54a84e85fb47e5f8c6,
+        type: 2}
     - target: {fileID: 5795894106815308614, guid: ace9d57ea570ceb4887ed79c5ff9d31c,
         type: 3}
       propertyPath: m_AnchorMax.x
