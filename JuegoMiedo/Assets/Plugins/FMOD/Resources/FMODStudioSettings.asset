@@ -187,8 +187,8 @@ MonoBehaviour:
       Value: 
       HasValue: 0
     SpeakerMode:
-      Value: 0
-      HasValue: 0
+      Value: 3
+      HasValue: 1
     VirtualChannelCount:
       Value: 0
       HasValue: 0
@@ -202,7 +202,8 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Plugins:
-      Value: []
+      Value:
+      - resonanceaudio
       HasValue: 1
     StaticPlugins:
       Value: []
@@ -322,8 +323,8 @@ MonoBehaviour:
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
-  AutomaticEventLoading: 1
-  BankLoadType: 0
+  AutomaticEventLoading: 0
+  BankLoadType: 1
   AutomaticSampleLoading: 0
   EncryptionKey: 
   ImportType: 0
@@ -345,7 +346,12 @@ MonoBehaviour:
   - NonAmbience
   - NonMusic
   - NonSFX
-  BanksToLoad: []
+  BanksToLoad:
+  - Master
+  - Master.strings
+  - NonAmbience
+  - NonMusic
+  - NonSFX
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0

@@ -6,7 +6,7 @@ public class ChangeAvenue : MonoBehaviour
     [SerializeField] private RoomManagerScriptableObject RoomManagerScriptableObject;
     [SerializeField] private DecalProjector _decal;
     [SerializeField] private Texture[] _texturas;
-    [SerializeField] private int _currentTexture;
+    [SerializeField] private int _currentTexture = 0;
 
     private void Update()
     {
