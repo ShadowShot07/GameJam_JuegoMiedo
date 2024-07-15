@@ -21,6 +21,7 @@ public class Screamer : MonoBehaviour
         AudioManager.instance.PlayScream();
         _screamerObject.SetActive(true);
         _screamerObject.transform.position = _camera.transform.position + _camera.transform.forward;
+        _screamerObject.transform.SetParent(_camera.transform);
         while (elapsed < duration)
         {
             float x = (Random.value - 0.5f) * currentMagnitude;
