@@ -72,8 +72,8 @@ Material:
     - _BrightnessMod: 4
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Density: 2.43
-    - _DensityMod: 1.717
+    - _Density: 0.91
+    - _DensityMod: 3
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnableBackgroundNoise: 1
@@ -81,7 +81,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Layers: 2.33
+    - _Layers: 4.07
     - _MaxStarSize: 0.87
     - _Metallic: 0
     - _MinStarSize: 0.57
@@ -102,9 +102,9 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MoonBloomParams: {r: 5.823871, g: -0.3696294, b: 0.05, a: 5.3}
     - _MoonTint: {r: 0.8254717, g: 0.9563679, b: 1, a: 1}
-    - _NoiseMaskParams: {r: 0.33, g: 6, b: 0.628, a: 2.11}
-    - _NoiseMaskParams2: {r: 0.08747184, g: -0.018151425, b: 0.51, a: 2.49}
-    - _NoiseParams: {r: 0.75, g: 6, b: 0.795, a: 2.08}
+    - _NoiseMaskParams: {r: 1.35, g: 10, b: 1, a: 3.64}
+    - _NoiseMaskParams2: {r: 1, g: 0.89437675, b: 1, a: 4}
+    - _NoiseParams: {r: 1.92, g: 10, b: 1, a: 4}
     - _SkyColor: {r: 0, g: 0.07242849, b: 0.13207549, a: 1}
     - _SkyFogColor: {r: 0.1792453, g: 0.038047355, b: 0.04012383, a: 1}
     - _StarSizeRange: {r: 0.639899, g: 0.7607978, b: 0, a: 0}

@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: Hints
   m_EditorClassIdentifier: 
   hints:
-  - Cuando escapes de una anomalia espera al sonido de la campana
+  - Whenever you escape an anomaly, wait for the bell sound
+  - "If you discover our 11th anomaly, you will automatically get 50\u20AC"
+  - "Once upon a time, there was a tiny boat that didn\xB4t know how to read... And
+    he was ugly"
+  - Tonto el que lo lea

@@ -18,6 +18,7 @@ MonoBehaviour:
   backCount: 0
   currentAnomaly: {fileID: 0}
   cleanAnomalyObjects: 0
+  haveScreamer: 0
   roomChangeEvent:
     m_PersistentCalls:
       m_Calls: []

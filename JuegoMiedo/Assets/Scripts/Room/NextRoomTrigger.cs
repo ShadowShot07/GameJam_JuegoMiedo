@@ -46,10 +46,19 @@ public class NextRoomTrigger : MonoBehaviour
             if (RoomManager.currentRoom >= 0 && RoomManager.currentRoom < RoomManager.finalRoom -1)
             {
                 _tpTarget.isTrigger = true;
+
                 if (RoomManager.currentAnomaly == null)
                 {
-                    _nextRoom = RoomManager.currentRoom + 1;
-                    TakeAnomalyObjects();
+                    if (RoomManager.haveScreamer == true)
+                    {
+                        _nextRoom = 0;
+                        RoomManager.haveScreamer = false;
+                    }
+                    else
+                    {
+                        _nextRoom = RoomManager.currentRoom + 1;
+                        TakeAnomalyObjects();
+                    }
                 }
                 else if (RoomManager.currentAnomaly != null)
                 {

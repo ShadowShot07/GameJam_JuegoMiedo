@@ -17,6 +17,7 @@ public class RoomManagerScriptableObject : ScriptableObject
     [Header("Anomalia")]
     public GameObject currentAnomaly;
     public bool cleanAnomalyObjects;
+    public bool haveScreamer;
 
     [Header("Eventos")]
     public UnityEvent<int> roomChangeEvent;
@@ -28,6 +29,7 @@ public class RoomManagerScriptableObject : ScriptableObject
         finalRoom = 5;
         backCount = 0;
         cleanAnomalyObjects = false;
+        haveScreamer = false;
         currentAnomaly = null;
         if (roomChangeEvent == null) { roomChangeEvent = new UnityEvent<int>(); }
     }
