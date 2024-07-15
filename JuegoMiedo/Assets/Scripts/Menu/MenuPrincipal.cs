@@ -46,6 +46,7 @@ public class MenuPrincipal : MonoBehaviour
     {
         startButton.onClick.RemoveListener(OnStartButtonPressed);
         SettingsButton.onClick.RemoveListener(OnSettingsButtonPressed);
+ 
     }
 
     public void OnStartButtonPressed()
