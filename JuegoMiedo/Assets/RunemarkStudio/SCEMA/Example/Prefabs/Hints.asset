@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: Hints
   m_EditorClassIdentifier: 
   hints:
-  - You can open scenes with a single click.
-  - Add scene to build setting easily
-  - SCEMA works with Additive Scenes!
-  - Use shift+click to open scene additive in editor
+  - Cuando escapes de una anomalia espera al sonido de la campana

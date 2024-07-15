@@ -195,7 +195,7 @@ MonoBehaviour:
   closeCondition: 0
   closeKey: 32
   hintDatabase: {fileID: 11400000, guid: 373c9f7b1daf3f84698aad12ff76eaea, type: 2}
-  hintPrefix: 'Hint: '
+  hintPrefix: 
   uiElements:
     locationName: {fileID: 0}
     splashscreen: {fileID: 0}
@@ -759,7 +759,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: Here comes the progress info..
+  m_Text: 
 --- !u!1 &1904256645834144
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HINTS
+  m_text: TIPS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0867b45c1c9513b4992fa65bf1c3bba5, type: 2}
   m_sharedMaterial: {fileID: -2253515986431508836, guid: 0867b45c1c9513b4992fa65bf1c3bba5,
