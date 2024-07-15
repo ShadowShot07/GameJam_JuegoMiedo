@@ -861,6 +861,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6166752266447137446, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: _currentTexture
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7674688701942948456, guid: 659f5e8d90649754fa00302e2af25ec5,
+        type: 3}
+      propertyPath: m_RenderShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7963773100239581391, guid: 659f5e8d90649754fa00302e2af25ec5,
         type: 3}
       propertyPath: m_Mesh
