@@ -380,7 +380,7 @@ MonoBehaviour:
   walkSpeed: 5
   maxVelocityChange: 10
   enableSprint: 1
-  unlimitedSprint: 0
+  unlimitedSprint: 1
   sprintKey: 304
   sprintSpeed: 7
   sprintDuration: 5
@@ -438,10 +438,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e5aaa4f97f41b4e9820cb42e4a5cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasScreamer: {fileID: 0}
   elapsed: 0
   currentMagnitude: 1
   duration: 1
+  _camera: {fileID: 0}
+  _screamerPrefab: {fileID: 0}
+  _escenario: {fileID: 0}
 --- !u!1 &5390013702116858113
 GameObject:
   m_ObjectHideFlags: 0
